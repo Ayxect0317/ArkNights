@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,initial-scale=1">
+    <title>アークナイツ　タイマー</title>
+    <link href="../../_common/images/favicon.ico" rel="shortcut icon">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/table.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="container">
+    </div><!-- /.container -->
+    </header>
+    <main>
+    <div class="container">
+        <section>
+            <div class="flexBox">
+                <table>
+                    <tr>
+                        <th>
+                            <img src="../src/image//soc/soc_senpou.png" height="80">
+                            <img src="../src/image//soc/soc_hojo.png" height="80">
+                        </th>
+                        <td>
+                            <p>先鋒/補助（水/木/土/日）</p>
+                            <p><span id="senpou"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="../src/image//soc/soc_sogeki.png" height="80">
+                            <img src="../src/image//soc/soc_jutushi.png" height="80">
+                        </th>
+                        <td>
+                            <p>狙撃/術師（月/火/金/土）</p>
+                            <p><span id="sogeki"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="../src/image//soc/soc_zennei.png" height="80">
+                            <img src="../src/image//soc/soc_tokusyu.png" height="80">
+                        </th>
+                        <td>
+                            <p>前衛・特殊（月/木/金/日）</p>
+                            <p><span id="zennei"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="../src/image//soc/soc_juusou.png" height="80">
+                            <img src="../src/image//soc/soc_iryou.png" height="80">
+                        </th>
+                        <td>
+                            <p>重装・医療（水/木/土/日）</p>
+                            <p><span id="juusou"></span></p>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>
+                            <img src="../src/image//busshi/koubai.png" height="80">
+                        </th>
+                        <td>
+                            <p>防御突破（月/木/土/日）</p>
+                            <p><span id="bougyo"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="../src/image//busshi/arts.png" height="80">
+                        </th>
+                        <td>
+                            <p>空軍迎撃（火/水/金/日）</p>
+                            <p><span id="kuugun"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="../src/image//busshi/cache.png" height="80">
+                        </th>
+                        <td>
+                            <p>貨物輸送（火/木/土/日）</p>
+                            <p><span id="kamotsu"></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="../src/image//busshi/carbon.png" height="80">
+                        </th>
+                        <td>
+                            <p>資源確保（月/水/金/土）</p>
+                            <p><span id="shigen"></span></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div><!-- /.container -->
+    </main>
+    <footer>
+    <div class="container">
+    </div><!-- /.container -->
+    </footer>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/script.js" type="module"></script> <!-- 外部ファイル読み込み時は type="module" を設定 -->
+</body>
+</html>

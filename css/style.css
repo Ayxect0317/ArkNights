@@ -1,0 +1,11 @@
+.container {
+    font-family: 'Kosugi', sans-serif;
+    font-size: 18px;
+}
+
+.flexBox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
