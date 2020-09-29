@@ -63,10 +63,10 @@ export function getMessage(days) {
     let message;
 
     if (isHeld(days)){
-        message = "開催中";
+        message = "<span class='time'>Currently Holding!</span>";
     } else {
         const counter = calcNextEventDate(days);
-        message = `開催まで　${counter.hour}時間${counter.min}分${counter.sec}秒`;
+        message = `Last <span class='time'>${counter.hour}:${counter.min}:${counter.sec}</span>`;
     }
     return message;
 }

@@ -1,0 +1,112 @@
+{
+  "materials": [
+    {
+      "name": "マンガン",
+      "highEndMaterial": "上級マンガン",
+      "lowMaterial": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "砥石",
+      "highEndMaterial": "上級砥石",
+      "lowMaterial": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "RMA70-12",
+      "highEndMaterial": "RMA70-24",
+      "lowMaterial": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "合成コール",
+      "highEndMaterial": "上級合成コール",
+      "lowMaterial": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "中級源岩",
+      "highEndMaterial": "上級源岩",
+      "lowMaterial": "初級源岩",
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "中級装置",
+      "highEndMaterial": "上級装置",
+      "lowMaterial": "初級装置",
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "中級エステル",
+      "highEndMaterial": "上級エステル",
+      "lowMaterial": "初級エステル",
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "中級糖源",
+      "highEndMaterial": "上級糖源",
+      "lowMaterial": "初級糖源",
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "中級異鉄",
+      "highEndMaterial": "上級異鉄",
+      "lowMaterial": "初級異鉄",
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "中級アケトン",
+      "highEndMaterial": "上級アケトン",
+      "lowMaterial": "初級アケトン",
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "人工ゲル",
+      "highEndMaterial": "融合ゲル",
+      "lowMaterial": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "name": "熾合金",
+      "highEndMaterial": "合成熾合金",
+      "lowMaterial": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+  ]
+}

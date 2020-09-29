@@ -1,5 +1,9 @@
+html {
+    background-color: lightsteelblue;
+}
+
 .container {
-    font-family: 'Kosugi', sans-serif;
+    font-family: 'Montserrat', 'Kosugi', sans-serif;
     font-size: 18px;
 }
 
