@@ -3,8 +3,9 @@ html {
 }
 
 .container {
+    color: white;
     font-family: 'Montserrat', 'Kosugi', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .flexBox {
