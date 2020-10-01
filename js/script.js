@@ -1,3 +1,5 @@
+"use strict";
+
 import {getMessage} from "./calcTimeToBeHeld.js";
 
 // メッセージ内容を calcTimeToBeHeld.js から取得する
