@@ -24,7 +24,11 @@ nav li {
     text-align: center;
 }
 
+nav li:hover {
+    background-color: royalblue;
+}
+
 #description{
     flex-basis: 800px;
-    padding: 10px;
+    padding-left: 1em;
 }
