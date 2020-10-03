@@ -1,5 +1,7 @@
 "use strict";
 
+import {getImgPath} from "./getImgPath.js";
+
 // html読み込み時の処理
 function initJson(url) {
     fetch(url)
@@ -13,8 +15,7 @@ function initJson(url) {
 // 素材名と画像をHTMLへ出力する
 function showMaterialNameAndImg(jsonData) {
     document.getElementById("materialName").innerHTML =
-        `<img src="../src/image/material/middle/${jsonData["materials"][0]["img"]}" height="100">` +
-        `${jsonData["materials"][0]["name"]}`;
+        `${getImgPath(jsonData["materials"][0]["id"])}${jsonData["materials"][0]["name"]}`;
 }
 
 // 収集場所を出力する

@@ -1,54 +1,55 @@
 {
   "materials": [
     {
+      "id": "m_manganese",
       "name": "マンガン",
       "superiorMaterial": [
         "上級マンガン"
       ],
       "lowMaterial": null,
-      "img": "m-manganese.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_toishi",
       "name": "砥石",
       "superiorMaterial": [
         "上級砥石"
       ],
       "lowMaterial": null,
-      "img": "m-toishi.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_rma",
       "name": "RMA70-12",
       "superiorMaterial": [
         "RMA70-24"
       ],
       "lowMaterial": null,
-      "img": "m-rma.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_alcohol",
       "name": "合成コール",
       "superiorMaterial": [
         "上級合成コール"
       ],
       "lowMaterial": null,
-      "img": "m-alcohol.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_rock",
       "name": "中級源岩",
       "superiorMaterial": [
         "上級源岩"
@@ -56,13 +57,13 @@
       "lowMaterial": [
         "初級源岩"
       ],
-      "img": "m-rock.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_souchi",
       "name": "中級装置",
       "superiorMaterial": [
         "上級装置"
@@ -70,13 +71,13 @@
       "lowMaterial": [
         "初級装置"
       ],
-      "img": "m-souchi.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_ester",
       "name": "中級エステル",
       "superiorMaterial": [
         "上級エステル"
@@ -84,13 +85,13 @@
       "lowMaterial": [
         "初級エステル"
       ],
-      "img": "m-ester.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_glucose",
       "name": "中級糖源",
       "superiorMaterial": [
         "上級糖源"
@@ -98,13 +99,13 @@
       "lowMaterial": [
         "初級糖源"
       ],
-      "img": "m-glucose.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_iron",
       "name": "中級異鉄",
       "superiorMaterial": [
         "上級異鉄"
@@ -112,13 +113,13 @@
       "lowMaterial": [
         "初級異鉄"
       ],
-      "img": "m-iron.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_achetone",
       "name": "中級アケトン",
       "superiorMaterial": [
         "上級アケトン"
@@ -126,31 +127,30 @@
       "lowMaterial": [
         "初級アケトン"
       ],
-      "img": "m-achetone.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_gel",
       "name": "人工ゲル",
       "superiorMaterial": [
         "融合ゲル"
       ],
       "lowMaterial": null,
-      "img": "m-gel.png",
       "stageToGet": [
         "0-0",
         "0-1"
       ]
     },
     {
+      "id": "m_alloy",
       "name": "熾合金",
       "superiorMaterial": [
         "合成熾合金"
       ],
       "lowMaterial": null,
-      "img": "m-alloy.png",
       "stageToGet": [
         "0-0",
         "0-1"
