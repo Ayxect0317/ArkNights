@@ -1,7 +1,7 @@
 "use strict";
 
-import { getImgPath } from "./getImgPath.js";
-import { convertRecipieToTag } from "./convertRecipieToTag.js";
+import { convertMaterialIdToImgTag } from "./convertTag/convertMaterialIdToImgTag.js";
+import { convertRecipieToTag } from "./convertTag/convertRecipieToTag.js";
 
 class handleMaterial {
     constructor(jsonPath) {
@@ -14,7 +14,7 @@ class handleMaterial {
         const data = await response.json();
         const materialList = data["materials"][4];
         document.getElementById("materialName").innerHTML =
-            `${getImgPath(materialList["id"])}${materialList["name"]}`;
+            `${convertMaterialIdToImgTag(materialList["id"])}${materialList["name"]}`;
     }
 
     // 収集場所を出力する
@@ -40,12 +40,15 @@ class handleMaterial {
 
         if (superiorMaterials) {
             for (const superiorMaterial of superiorMaterials) {
+                // 上位素材画像を表示する
+                message = message + `<p>${convertMaterialIdToImgTag(superiorMaterial["id"], 80)}`;
+
                 // 上位素材名を表示する
-                message = message + `<p>${superiorMaterial["name"]}<br>`; 
+                message = message + `${superiorMaterial["name"]}<br>`;
 
                 // 必要素材を [画像]x[個数]の形式で表示
                 message = message +
-                    `必要素材: ${convertRecipieToTag(superiorMaterial["recipie"])}</p>`;
+                    `必要素材: ${convertRecipieToTag(superiorMaterial["recipie"])}</$>`;
             }
         } else {
             message = "<p>上位素材はありません。</p>"

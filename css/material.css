@@ -13,7 +13,7 @@
     padding: 10px;
 }
 
-#materialName img {
+#materialName img, #description img {
     padding-right: .5em;
     vertical-align: middle;
 }

@@ -5,6 +5,7 @@
       "name": "マンガン",
       "superiorMaterial": [
         {
+          "id": "h_manganese",
           "name": "上級マンガン",
           "recipie": [
             {
@@ -32,7 +33,24 @@
       "id": "m_toishi",
       "name": "砥石",
       "superiorMaterial": [
-        "上級砥石"
+        {
+          "id": "h_toishi",
+          "name": "上級砥石",
+          "recipie": [
+            {
+              "id": "m_toishi",
+              "quantity": 1
+            },
+            {
+              "id": "m_iron",
+              "quantity": 1
+            },
+            {
+              "id": "m_souchi",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
@@ -44,7 +62,24 @@
       "id": "m_rma",
       "name": "RMA70-12",
       "superiorMaterial": [
-        "RMA70-24"
+        {
+          "id": "h_rma",
+          "name": "RMA70-24",
+          "recipie": [
+            {
+              "id": "m_rma",
+              "quantity": 1
+            },
+            {
+              "id": "m_rock",
+              "quantity": 2
+            },
+            {
+              "id": "m_achetone",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
@@ -56,7 +91,24 @@
       "id": "m_alcohol",
       "name": "合成コール",
       "superiorMaterial": [
-        "上級合成コール"
+        {
+          "id": "h_alcohol",
+          "name": "上級合成コール",
+          "recipie": [
+            {
+              "id": "m_alcohol",
+              "quantity": 1
+            },
+            {
+              "id": "m_glucose",
+              "quantity": 1
+            },
+            {
+              "id": "m_rma",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
@@ -69,11 +121,12 @@
       "name": "中級源岩",
       "superiorMaterial": [
         {
+          "id": "h_rock",
           "name": "上級源岩",
           "recipie": [
             {
               "id": "m_rock",
-              "quantity": 5
+              "quantity": 4
             }
           ]
         }
@@ -93,11 +146,28 @@
       "id": "m_souchi",
       "name": "中級装置",
       "superiorMaterial": [
-        "上級装置"
+        {
+          "id": "h_soouchi",
+          "name": "上級装置",
+          "recipie": [
+            {
+              "id": "m_souchi",
+              "quantity": 1
+            },
+            {
+              "id": "m_rock",
+              "quantity": 2
+            },
+            {
+              "id": "m_toishi",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": [
         {
-          "id": "l_spichi",
+          "id": "l_souchi",
           "quantity": 4
         }
       ],
@@ -110,7 +180,24 @@
       "id": "m_ester",
       "name": "中級エステル",
       "superiorMaterial": [
-        "上級エステル"
+        {
+          "id": "h_ester",
+          "name": "上級エステル",
+          "recipie": [
+            {
+              "id": "m_ester",
+              "quantity": 2
+            },
+            {
+              "id": "m_achetone",
+              "quantity": 1
+            },
+            {
+              "id": "m_alcohol",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": [
         {
@@ -127,7 +214,24 @@
       "id": "m_glucose",
       "name": "中級糖源",
       "superiorMaterial": [
-        "上級糖源"
+        {
+          "id": "h_clucose",
+          "name": "上級糖源",
+          "recipie": [
+            {
+              "id": "m_glucose",
+              "quantity": 2
+            },
+            {
+              "id": "m_iron",
+              "quantity": 1
+            },
+            {
+              "id": "m_manganese",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": [
         {
@@ -144,7 +248,24 @@
       "id": "m_iron",
       "name": "中級異鉄",
       "superiorMaterial": [
-        "上級異鉄"
+        {
+          "id": "h_iron",
+          "name": "上級異鉄",
+          "recipie": [
+            {
+              "id": "m_iron",
+              "quantity": 2
+            },
+            {
+              "id": "m_souchi",
+              "quantity": 1
+            },
+            {
+              "id": "m_ester",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": [
         {
@@ -161,7 +282,24 @@
       "id": "m_achetone",
       "name": "中級アケトン",
       "superiorMaterial": [
-        "上級アケトン"
+        {
+          "id": "h_achetone",
+          "name": "上級アケトン",
+          "recipie": [
+            {
+              "id": "m_achetone",
+              "quantity": 2
+            },
+            {
+              "id": "m_glucose",
+              "quantity": 1
+            },
+            {
+              "id": "m_manganese",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": [
         {
@@ -178,7 +316,24 @@
       "id": "m_gel",
       "name": "人工ゲル",
       "superiorMaterial": [
-        "融合ゲル"
+        {
+          "id": "h_gel",
+          "name": "融合ゲル",
+          "recipie": [
+            {
+              "id": "m_iron",
+              "quantity": 1
+            },
+            {
+              "id": "m_gel",
+              "quantity": 1
+            },
+            {
+              "id": "m_alloy",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
@@ -190,7 +345,24 @@
       "id": "m_alloy",
       "name": "熾合金",
       "superiorMaterial": [
-        "合成熾合金"
+        {
+          "id": "h_alloy",
+          "name": "合成熾合金",
+          "recipie": [
+            {
+              "id": "m_souchi",
+              "quantity": 1
+            },
+            {
+              "id": "m_toishi",
+              "quantity": 1
+            },
+            {
+              "id": "m_alloy",
+              "quantity": 1
+            }
+          ]
+        }
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
