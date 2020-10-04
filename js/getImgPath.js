@@ -1,11 +1,13 @@
 "use strict";
 
 // 素材IDから画像パスを取得する
-export function getImgPath(id) {
+export function getImgPath(id, ...setHeight) {
+    // imgタグの基本構造を設定
     let firstPath = "<img src='../src/image/material/";
-    let lastPath = ".png' height='100'>";
-    let quality;
+    let height = Number.isInteger(setHeight[0]) ? setHeight : 100; //第2引数が整数として設定されていれば、heightを設定値に
+    let lastPath = `.png' height='${height}'>`;
 
+    let quality;
     switch (id.slice(0, 1)) {
         case "e":
             quality = "highEnd";
