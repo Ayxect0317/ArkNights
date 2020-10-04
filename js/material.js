@@ -1,85 +1,77 @@
 "use strict";
 
-import {getImgPath} from "./getImgPath.js";
+import { getImgPath } from "./getImgPath.js";
 
-// html読み込み時の処理
-function initJson(url) {
-    fetch(url)
-        .then(response => response.json())
-        .then(function(data){
-            showMaterialNameAndImg(data);
-            showStagesToGet(data);
-        })
-}
-
-// 素材名と画像をHTMLへ出力する
-function showMaterialNameAndImg(jsonData) {
-    document.getElementById("materialName").innerHTML =
-        `${getImgPath(jsonData["materials"][0]["id"])}${jsonData["materials"][0]["name"]}`;
-}
-
-// 収集場所を出力する
-function showStagesToGet(jsonData) {
-    let message= "";
-    let stages = jsonData["materials"][0]["stageToGet"]
-    for(const stage of stages){
-        message = message + `<p>${stage}</p>`;
+class handleMaterial {
+    constructor(jsonPath) {
+        this.jsonPath = jsonPath;
     }
-    document.getElementById("description").innerHTML = message;
-}
 
-// 上位素材を表示する
-function showSuperiorMaterial(jsonData) {
-    let message= "";
-    let materials = jsonData["materials"][0]["superiorMaterial"]
-
-    if (materials) {
-        for (const material of materials) {
-            message = message + `<p>${material}</p>`;
+        // 素材名と画像をHTMLへ出力する
+        async showMaterialNameAndImg() {
+            const response = await fetch(this.jsonPath);
+            const data = await response.json();
+            const materialList = data["materials"][0];
+            document.getElementById("materialName").innerHTML =
+                `${getImgPath(materialList["id"])}${materialList["name"]}`;
         }
-    } else {
-        message = "<p>上位素材はありません。</p>"
-    }
 
-    document.getElementById("description").innerHTML = message;
-}
-
-// 下位素材を表示する
-function showLowMaterial(jsonData) {
-    let message= "";
-    let materials = jsonData["materials"][0]["lowMaterial"]
-
-    if (materials) {
-        for (const material of materials) {
-            message = message + `<p>${material}</p>`;
+        // 収集場所を出力する
+        async showStagesToGet() {
+            let message = "";
+            const response = await fetch(this.jsonPath);
+            const data = await response.json();
+            const materialList = data["materials"][0];
+            let stages = materialList["stageToGet"]
+            for (const stage of stages) {
+                message = message + `<p>${stage}</p>`;
+            }
+            document.getElementById("description").innerHTML = message;
         }
-    } else {
-        message = "<p>下位素材はありません。</p>"
-    }
 
-    document.getElementById("description").innerHTML = message;
-}
+        // 上位素材を表示する
+        showSuperiorMaterial() {
+            let message = "";
+            let materials = this.materialList["superiorMaterial"]
+
+            if (materials) {
+                for (const material of materials) {
+                    message = message + `<p>${material}</p>`;
+                }
+            } else {
+                message = "<p>上位素材はありません。</p>"
+            }
+
+            document.getElementById("description").innerHTML = message;
+        }
+
+        // 下位素材を表示する
+        showLowMaterial() {
+            let message = "";
+            let materials = this.materialList["lowMaterial"]
+
+            if (materials) {
+                for (const material of materials) {
+                    message = message + `<p>${material}</p>`;
+                }
+            } else {
+                message = "<p>下位素材はありません。</p>"
+            }
+
+            document.getElementById("description").innerHTML = message;
+        }
+    }
 
 // html読み込み時、収集場所をデフォルトとして表示
-window.addEventListener('DOMContentLoaded', initJson("../src/json/M_Material.json"));
+let handleM = new handleMaterial("../src/json/M_Material.json");
+window.addEventListener('DOMContentLoaded', handleM.showMaterialNameAndImg());
+window.addEventListener('DOMContentLoaded', handleM.showStagesToGet());
 
 // "収集場所"クリック時、収集場所を表示
-document.getElementById("stageToGet").onclick = function() {
-    fetch("../src/json/M_Material.json")
-        .then(response => response.json())
-        .then(data => showStagesToGet(data))
-}
+document.getElementById("stageToGet").onclick = () => { showStagesToGet() }
 
 // "上位素材"クリック時、上位素材を表示
-document.getElementById("superiorMaterial").onclick = function() {
-    fetch("../src/json/M_Material.json")
-        .then(response => response.json())
-        .then(data => showSuperiorMaterial(data))
-}
+document.getElementById("superiorMaterial").onclick = () => { showSuperiorMaterial() }
 
 // "下位素材"クリック時、下位素材を表示
-document.getElementById("lowMaterial").onclick = function() {
-    fetch("../src/json/M_Material.json")
-        .then(response => response.json())
-        .then(data => showLowMaterial(data))
-}
+document.getElementById("lowMaterial").onclick = () => { showLowMaterial(materialList) }

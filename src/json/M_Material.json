@@ -4,7 +4,23 @@
       "id": "m_manganese",
       "name": "マンガン",
       "superiorMaterial": [
-        "上級マンガン"
+        {
+          "name": "上級マンガン",
+          "recipoe": [
+            {
+              "id": "m_manganese",
+              "require": 2
+            },
+            {
+              "id": "m_ester",
+              "require": 1
+            },
+            {
+              "id": "m_alcohol",
+              "require": 1
+            }
+          ]
+        }
       ],
       "lowMaterial": null,
       "stageToGet": [
@@ -52,7 +68,15 @@
       "id": "m_rock",
       "name": "中級源岩",
       "superiorMaterial": [
-        "上級源岩"
+        {
+          "name": "上級源岩",
+          "recipie": [
+            {
+              "id": "m_rock",
+              "require": 5
+            }
+          ]
+        }
       ],
       "lowMaterial": [
         "初級源岩"
