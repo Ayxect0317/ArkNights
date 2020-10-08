@@ -1,5 +1,15 @@
+* {
+    /* ブラウザデフォルトの余白を削除 */
+    margin: 0px;
+    padding: 0px;
+}
+
 html {
     background-color: lightsteelblue;
+}
+
+main {
+    margin: 15px 0;
 }
 
 .container {
@@ -13,4 +23,8 @@ html {
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
+}
+
+p {
+    margin: 10px 0;
 }

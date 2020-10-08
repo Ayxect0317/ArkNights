@@ -1,6 +1,6 @@
-#materialName, nav li, #description {
+#materialName, #changeDesciription li, #description {
     background-color: hsl(0, 0%, 20%);
-    border: 2px solid white;
+    border: 1px solid white;
     font-size: 1.5em;
     margin: 0 20px;
 }
@@ -10,23 +10,29 @@
 }
 
 #materialName {
+    margin-bottom: 20px;
     padding: 10px;
 }
 
 #materialName img, #description img {
-    padding-right: .5em;
+    padding: 5px .25em;
     vertical-align: middle;
 }
 
-nav li {
-    list-style: none;
-    padding: 10px;
-    text-align: center;
+#changeDesciription ul {
+    padding: 0; /* マーカーを消したことで発生する左側の空白を除去 */
 }
 
-nav li:hover {
+#changeDesciription li {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#changeDesciription li:hover {
     background-color: royalblue;
 }
+
 
 #description{
     flex-basis: 800px;

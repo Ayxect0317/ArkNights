@@ -1,6 +1,6 @@
 "use strict";
 
-import {getMessage} from "./calcTimeToBeHeld.js";
+import {getMessage} from "./util/calcTimeToBeHeld.js";
 
 // メッセージ内容を calcTimeToBeHeld.js から取得する
 function recalc() {

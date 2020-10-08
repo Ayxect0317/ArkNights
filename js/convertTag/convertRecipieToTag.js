@@ -7,7 +7,7 @@ import { convertMaterialIdToImgTag } from "./convertMaterialIdToImgTag.js";
 export function convertRecipieToTag(recipieList) {
     let message = "";
     for (let requireMaterial of recipieList) {
-        message = message + `${convertMaterialIdToImgTag(requireMaterial["id"], 75)}x${requireMaterial["quantity"]}  `;
+        message = message + `${convertMaterialIdToImgTag(requireMaterial["id"])}x${requireMaterial["quantity"]}  `;
     }
     return message;
 }
