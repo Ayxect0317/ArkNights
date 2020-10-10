@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="height=device-height,initial-scale=1">
@@ -9,43 +10,38 @@
     <link href="../css/header.css" rel="stylesheet">
     <link href="../css/material.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <header>
+    <header></header>
     <div class="container">
-        <nav>
-            <ul id="navigation">
-                <a href="./dayMission.html"><li>曜日ミッション</li></a>
-                <a href="./material.html"><li>素材一覧</li></a>
-            </ul>
-        </nav>
-    </div><!-- /.container -->
-    </header>
-    <main>
-    <div class="container">
-        <section>
-            <div class="flexBox">
-                <div id="title">
-                    <div id="materialName"></div>
-                    <nav id="changeDesciription">
-                        <ul>
-                            <li id="stageToGet">収集場所</li>
-                            <li id="superiorMaterial">上位素材</li>
-                            <li id="lowMaterial">下位素材</li>
-                        </ul>
-                    </nav>
+        <main>
+            <section>
+                <div class="flexBox">
+                    <div id="title">
+                        <div id="materialName"></div>
+                        <nav id="changeDesciription">
+                            <ul>
+                                <li id="stageToGet">収集場所</li>
+                                <li id="superiorMaterial">上位素材</li>
+                                <li id="lowMaterial">下位素材</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="description"></div>
                 </div>
-                <div id="description"></div>
-            </div>
-        </section>
-    </div><!-- /.container -->
-    </main>
-    <footer>
-    <div class="container">
-    </div><!-- /.container -->
-    </footer>
+            </section>
+        </main>
+    </div>
+    <div class="footer">
+        <footer>
+        </footer>
+    </div>
     <!-- javascript内で別の外部ファイルを読み込む時は type="module" を設定 -->
+    <script src="../js/header.js" type="module"></script>
     <script src="../js/material.js" type="module"></script>
 </body>
+
 </html>

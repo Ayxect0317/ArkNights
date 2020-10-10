@@ -1,12 +1,13 @@
 "use strict";
 
-import {getMessage} from "./util/calcTimeToBeHeld.js";
+import {getMessage} from "./util/makeMessageForDailyMission.js";
 
-// メッセージ内容を calcTimeToBeHeld.js から取得する
 function recalc() {
     function showMessage (dist) {
+        // 各デイリーミッション毎にメッセージを表示する
         let message;
         for(let key in dist) {
+            // メッセージ内容を makeMessageForDailyMission.js から取得する
             message = getMessage(dist[key]);
             document.getElementById(key).innerHTML = message;
         }

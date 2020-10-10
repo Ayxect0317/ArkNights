@@ -93,8 +93,8 @@ class handleMaterial {
 
 // html読み込み時、収集場所をデフォルトとして表示
 let handleM = new handleMaterial("m_manganese");
-window.addEventListener('DOMContentLoaded', handleM.showMaterialNameAndImg());
-window.addEventListener('DOMContentLoaded', handleM.showStagesToGet());
+window.addEventListener("DOMContentLoaded", handleM.showMaterialNameAndImg());
+window.addEventListener("DOMContentLoaded", handleM.showStagesToGet());
 
 // "収集場所"クリック時、収集場所を表示
 document.getElementById("stageToGet").onclick = () => { handleM.showStagesToGet() }

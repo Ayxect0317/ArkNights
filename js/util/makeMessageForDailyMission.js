@@ -1,5 +1,7 @@
 "use strict";
 
+import { zeroPadding } from "../util/zeroPadding.js";
+
 /* ----
     それぞれの曜日任務が開催中か判断し、
     開催中ならば "開催中" 、そうでなければ "開催までの時間" をメッセージとして返す
@@ -44,11 +46,6 @@ function calcNextEventDate(days) {
     const min = Math.floor(rest / 1000 / 60) % 60;
     const hour = Math.floor(rest / 1000 / 60 / 60) % 24;
     const day = Math.floor(rest / 1000 / 60 / 60 / 24);
-
-    // フォーマットを2桁の整数にする（0で埋める）
-    function zeroPadding(num) {
-        return ("00" + num).slice(-2);
-    }
 
     let count = {
         sec: zeroPadding(sec),
