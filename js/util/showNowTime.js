@@ -1,6 +1,6 @@
 "use strict";
 
-import { zeroPadding } from "../util/zeroPadding.js";
+import zeroPadding from "../util/zeroPadding.js";
 
 // 現在の時刻を文字列として返す
 function calcNowDate() {
@@ -16,7 +16,7 @@ function calcNowDate() {
 }
 
 // メッセージ内容を calcTimeToBeHeld.js から取得する
-export function recalcNowTime() {
+export default function recalcNowTime() {
     document.getElementById("nowTime").textContent = calcNowDate();
 
     // 1秒ごとに更新（メッセージを再取得）する

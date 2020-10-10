@@ -1,6 +1,6 @@
 "use strict";
 
-import { recalcNowTime } from "../js/util/showNowTime.js";
+import recalcNowTime from "../js/util/showNowTime.js";
 
 // header.htmlを読み込み、headerタグに出力
 async function createHeader() {

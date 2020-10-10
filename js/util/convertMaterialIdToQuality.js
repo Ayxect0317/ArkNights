@@ -1,7 +1,7 @@
 "use strict";
 
 // 素材IDから素材の品質を取得する
-export function convertMaterialIdToQuality(id) {
+export default function convertMaterialIdToQuality(id) {
     let quality;
     switch (id.slice(0, 1)) {
         case "e":

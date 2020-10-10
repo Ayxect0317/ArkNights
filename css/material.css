@@ -33,8 +33,21 @@
     background-color: royalblue;
 }
 
-
-#description{
+#description {
     flex-basis: 800px;
     padding-left: 1em;
+}
+
+#materialTable {
+    margin: 0 auto;
+}
+
+#materialTable td {
+    padding: 10px 0;
+    width: 200px;
+}
+
+#materialTable img {
+    padding-right: .25em;
+    vertical-align: middle;
 }

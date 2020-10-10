@@ -1,6 +1,6 @@
 "use strict";
 
-import { zeroPadding } from "../util/zeroPadding.js";
+import zeroPadding from "../util/zeroPadding.js";
 
 /* ----
     それぞれの曜日任務が開催中か判断し、
@@ -56,7 +56,7 @@ function calcNextEventDate(days) {
 }
 
 // script.js にメッセージを返却する
-export function getMessage(days) {
+export default function getMessage(days) {
     let message;
 
     if (isHeld(days)){
