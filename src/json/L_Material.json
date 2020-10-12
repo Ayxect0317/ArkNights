@@ -1,0 +1,160 @@
+{
+  "materials": [
+    {
+      "id": "l_rock",
+      "name": "初級源岩",
+      "superiorMaterial": [
+        {
+          "id": "m_rock",
+          "name": "中級源岩",
+          "recipie": [
+            {
+              "id": "l_rock",
+              "quantity": 5
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": [
+        {
+          "id": "b_rock",
+          "quantity": 3
+        }
+      ],
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "l_souchi",
+      "name": "初級装置",
+      "superiorMaterial": [
+        {
+          "id": "m_soouchi",
+          "name": "中級装置",
+          "recipie": [
+            {
+              "id": "l_souchi",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": [
+        {
+          "id": "b_souchi",
+          "quantity": 4
+        }
+      ],
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "l_ester",
+      "name": "初級エステル",
+      "superiorMaterial": [
+        {
+          "id": "m_ester",
+          "name": "中級エステル",
+          "recipie": [
+            {
+              "id": "l_ester",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": [
+        {
+          "id": "b_ester",
+          "quantity": 4
+        }
+      ],
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "l_glucose",
+      "name": "初級糖源",
+      "superiorMaterial": [
+        {
+          "id": "m_clucose",
+          "name": "中級糖源",
+          "recipie": [
+            {
+              "id": "l_glucose",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": [
+        {
+          "id": "b_glucose",
+          "quantity": 4
+        }
+      ],
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "l_iron",
+      "name": "初級異鉄",
+      "superiorMaterial": [
+        {
+          "id": "m_iron",
+          "name": "中級異鉄",
+          "recipie": [
+            {
+              "id": "l_iron",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": [
+        {
+          "id": "b_iron",
+          "quantity": 4
+        }
+      ],
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "l_achetone",
+      "name": "初級アケトン",
+      "superiorMaterial": [
+        {
+          "id": "m_achetone",
+          "name": "中級アケトン",
+          "recipie": [
+            {
+              "id": "l_achetone",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": [
+        {
+          "id": "b_achetone",
+          "quantity": 4
+        }
+      ],
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ export default class handleMaterial {
 
     // 素材名と画像をHTMLへ出力する
     async showMaterialNameAndImg() {
-        // JSONから必要なデータを抽出
+        // JSONから素材のIDのみを抽出
         const response = await fetch(this.jsonPath);
         const data = await response.json();
         const materialList = data.materials.filter(k => k.id === this._id)[0];

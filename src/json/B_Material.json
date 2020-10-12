@@ -1,0 +1,125 @@
+{
+  "materials": [
+    {
+      "id": "b_rock",
+      "name": "源岩鉱",
+      "superiorMaterial": [
+        {
+          "id": "l_rock",
+          "name": "初級源岩",
+          "recipie": null
+        }
+      ],
+      "lowMaterialRecipie": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "b_souchi",
+      "name": "破損装置",
+      "superiorMaterial": [
+        {
+          "id": "l_soouchi",
+          "name": "初級装置",
+          "recipie": [
+            {
+              "id": "b_souchi",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "b_ester",
+      "name": "エステル原料",
+      "superiorMaterial": [
+        {
+          "id": "l_ester",
+          "name": "初級エステル",
+          "recipie": [
+            {
+              "id": "b_ester",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "b_glucose",
+      "name": "ブドウ糖",
+      "superiorMaterial": [
+        {
+          "id": "l_clucose",
+          "name": "初級糖源",
+          "recipie": [
+            {
+              "id": "b_glucose",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "b_iron",
+      "name": "異鉄の欠片",
+      "superiorMaterial": [
+        {
+          "id": "l_iron",
+          "name": "初級異鉄",
+          "recipie": [
+            {
+              "id": "b_iron",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    },
+    {
+      "id": "b_achetone",
+      "name": "アケトン試剤",
+      "superiorMaterial": [
+        {
+          "id": "l_achetone",
+          "name": "初級アケトン",
+          "recipie": [
+            {
+              "id": "b_achetone",
+              "quantity": 4
+            }
+          ]
+        }
+      ],
+      "lowMaterialRecipie": null,
+      "stageToGet": [
+        "0-0",
+        "0-1"
+      ]
+    }
+  ]
+}
