@@ -25,16 +25,13 @@ export default class materialTable {
 
       // 素材ごとに画像・名前をtdタグへ表示
       let material = data.materials[i];
-      console.log(data.materials[i]);
       htmlConstruction = htmlConstruction +
-        `<td>${convertMaterialIdToImgTag(material.id, 50)}${material.name}</td>`;
-
-      // trタグを挿入
-      if (i % divideNum === divideNum - 1) {
-        htmlConstruction = htmlConstruction + "</tr>";
-      }
+        `<td class="${material.id}">${convertMaterialIdToImgTag(material.id, 50)}${material.name}</td>`;
     }
+
     htmlConstruction = htmlConstruction + "</tr>"; // 末尾のtrタグを挿入
-    document.getElementById("materialTable").innerHTML = htmlConstruction;
+    console.log(htmlConstruction);
+    // 今は直接HTMLン位書き込むため実行しない
+    //document.getElementById("materialTable").innerHTML = htmlConstruction;
   }
 }
