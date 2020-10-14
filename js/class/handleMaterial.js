@@ -1,16 +1,20 @@
 "use strict";
 
 import convertMaterialIdToImgTag from "../convertTag/convertMaterialIdToImgTag.js";
+import convertMaterialIdToJsonPath from "../util/convertMaterialIdToJsonPath.js";
 import convertRecipieToTag from "../convertTag/convertRecipieToTag.js";
 
 export default class handleMaterial {
     constructor(id) {
         this._id = id;
-        this.jsonPath = "../../src/json/M_Material.json";
+        this.jsonPath = convertMaterialIdToJsonPath(id);
     }
 
     get id() { return this._id };
-    set id(val) { this._id = val };
+    set id(val) {
+        this._id = val
+        this.jsonPath = convertMaterialIdToJsonPath(this.id); // JsonPathは素材IDに依存する
+    };
 
     // 素材名と画像をHTMLへ出力する
     async showMaterialNameAndImg() {
