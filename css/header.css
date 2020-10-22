@@ -10,7 +10,7 @@ header {
 }
 
 #navigation ul{
-    padding: 0; /* マーカーを消したことで発生する左側の空白を除去 */
+    /*padding: 0; /* マーカーを消したことで発生する左側の空白を除去 */
 }
 
 #navigation li{
@@ -18,10 +18,7 @@ header {
     border-right: 2px solid white;
     color: white;
     font-size: 1.5em;
-    list-style: none;
-    margin: auto 0; /* 上下中央ぞろえ */
     padding: 10px 40px;
-    text-decoration: none;
 }
 
 #navigation li:hover {

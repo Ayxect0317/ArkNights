@@ -1,4 +1,6 @@
-/* 全ページの共通設定を記述 */
+/* -----
+    全ページの共通設定を記述
+----- */
 
 * {
     /* ブラウザデフォルトの余白を削除 */
@@ -20,13 +22,6 @@ section {
     margin: 15px 0;
 }
 
-.flexBox {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-
 p {
     margin: 10px 0;
 }
@@ -39,4 +34,20 @@ table th, table td {
     border: solid 2px lightsteelblue;
     background-color: #333333;
     text-align: center;
+}
+
+
+/* flexBoxの共通設定 */
+
+.flexBox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flexBox li {
+    list-style: none;
+    margin: auto 0; /* 上下中央揃え */
+    text-decoration: none;
 }

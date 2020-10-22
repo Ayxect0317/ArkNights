@@ -85,7 +85,7 @@ export default class handleMaterial {
         let message = "<p><下位素材>";
         if (lowMaterialRecipie) {
             message = message +
-                `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie), 50}</p>`;
+                `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie)}</p>`;
         } else {
             message = message + "<br>下位素材はありません。</p>"
         }

@@ -16,7 +16,7 @@
 
 #materialName img, #description img {
     padding: 5px .25em;
-    vertical-align: middle;
+    vertical-align: middle; /* 画像と文字を上下中央で揃える */
 }
 
 #changeDesciription ul {
@@ -38,16 +38,16 @@
     padding-left: 1em;
 }
 
-#materialTable {
+.materialTable {
     margin: 0 auto;
 }
 
-#materialTable td {
+.materialTable td {
     padding: 10px 0;
     width: 200px;
 }
 
-#materialTable img {
+.materialTable img {
     padding-right: .25em;
-    vertical-align: middle;
+    vertical-align: middle; /* 画像と文字を上下中央で揃える */
 }

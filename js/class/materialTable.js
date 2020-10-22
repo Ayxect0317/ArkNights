@@ -9,9 +9,8 @@ import convertMaterialIdToImgTag from "../convertTag/convertMaterialIdToImgTag.j
 export default class materialTable {
   async create() {
     // JSONから必要なデータを抽出
-    const response = await fetch("../../src/json/M_Material.json");
+    const response = await fetch("../../src/json/E_Material.json");
     const data = await response.json();
-    console.log(data.materials.length);
 
     // 表の作成
     let htmlConstruction = ""

@@ -32,10 +32,21 @@ matTable.create();
 
 
 // 素材一覧から素材をクリックしたとき、section上部をクリックされた素材の情報へ更新する
-
+/* 基礎素材 */
+const b_materials = ["b_rock", "b_souchi", "b_ester", "b_glucose", "b_iron", "b_achetone"]
+/* 初級素材 */
+const l_materials = ["l_rock", "l_souchi", "l_ester", "l_glucose", "l_iron", "l_achetone"]
 /* 中級素材 */
 const m_materials = ["m_manganese", "m_toishi", "m_rma", "m_alcohol", "m_rock", "m_souchi",
-"m_ester", "m_glucose", "m_iron", "m_achetone", "m_gel", "m_alloy"];
+    "m_ester", "m_glucose", "m_iron", "m_achetone", "m_gel", "m_alloy"];
+/* 上級素材 */
+const h_materials = ["h_manganese", "h_toishi", "h_rma", "h_alcohol", "h_rock", "h_souchi",
+    "h_ester", "h_glucose", "h_iron", "h_achetone", "h_gel", "h_alloy"];
+/* 高級素材 */
+const e_materials = ["e_d32", "e_nano", "e_fusion"];
+
+const all_materials = [b_materials, l_materials, m_materials, h_materials, e_materials];
+
 
 // 処理内容
 function changeMaterial(handleM, val) {
@@ -45,8 +56,10 @@ function changeMaterial(handleM, val) {
 }
 
 // 実行
-for (let matId of m_materials) {
-    document.querySelectorAll(`.${matId}`).forEach(item => {
-        item.onclick = () => { changeMaterial(handleM, matId) }
-    });
+for (let oneQualityMaterials of all_materials) {
+    for (let matId of oneQualityMaterials) {
+        document.querySelectorAll(`.${matId}`).forEach(item => {
+            item.onclick = () => { changeMaterial(handleM, matId) }
+        });
+    }
 }
