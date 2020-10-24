@@ -2,142 +2,127 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="height=device-height,initial-scale=1">
-    <title>アークナイツ　素材一覧</title>
-    <link href="../../_common/images/favicon.ico" rel="shortcut icon">
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/header.css" rel="stylesheet">
-    <link href="../css/material.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,800&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="height=device-height,initial-scale=1">
+  <title>アークナイツ　素材一覧</title>
+  <link href="../../_common/images/favicon.ico" rel="shortcut icon">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/header.css" rel="stylesheet">
+  <link href="../css/material.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <section class="flexBox">
-            <div id="title">
-                <div id="materialName"></div>
-                <nav id="changeDesciription">
-                    <ul>
-                        <li id="stageToGet">収集場所</li>
-                        <li id="superiorMaterial">上位素材</li>
-                        <li id="lowMaterial">下位素材</li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="description"></div>
-        </section>
-        <section>
-            <table class="materialTable">
-                <tr>
-                    <td class="b_rock"><img src='../src/image/material/basic/b_rock.png' class='b_rock' height='50'>源岩鉱
-                    </td>
-                    <td class="b_souchi"><img src='../src/image/material/basic/b_souchi.png' class='b_souchi'
-                            height='50'>破損装置</td>
-                    <td class="b_ester"><img src='../src/image/material/basic/b_ester.png' class='b_ester'
-                            height='50'>エステル原料</td>
-                    <td class="b_glucose"><img src='../src/image/material/basic/b_glucose.png' class='b_glucose'
-                            height='50'>ブドウ糖</td>
-                    <td class="b_iron"><img src='../src/image/material/basic/b_iron.png' class='b_iron'
-                            height='50'>異鉄の欠片</td>
-                    <td class="b_achetone"><img src='../src/image/material/basic/b_achetone.png' class='b_achetone'
-                            height='50'>アケトン試剤</td>
-                </tr>
-            </table>
-            <table class="materialTable">
-                <tr>
-                    <td class="l_rock"><img src='../src/image/material/low/l_rock.png' class='l_rock' height='50'>初級源岩
-                    </td>
-                    <td class="l_souchi"><img src='../src/image/material/low/l_souchi.png' class='l_souchi'
-                            height='50'>初級装置</td>
-                    <td class="l_ester"><img src='../src/image/material/low/l_ester.png' class='l_ester'
-                            height='50'>初級エステル</td>
-                    <td class="l_glucose"><img src='../src/image/material/low/l_glucose.png' class='l_glucose'
-                            height='50'>初級糖源</td>
-                    <td class="l_iron"><img src='../src/image/material/low/l_iron.png' class='l_iron' height='50'>初級異鉄
-                    </td>
-                    <td class="l_achetone"><img src='../src/image/material/low/l_achetone.png' class='l_achetone'
-                            height='50'>初級アケトン</td>
-                </tr>
-            </table>
-            <table class="materialTable">
-                <tr>
-                    <td class="m_manganese"><img src='../src/image/material/middle/m_manganese.png' class='m_manganese'
-                            height='50'>マンガン</td>
-                    <td class="m_toishi"><img src='../src/image/material/middle/m_toishi.png' class='m_toishi'
-                            height='50'>砥石</td>
-                    <td class="m_rma"><img src='../src/image/material/middle/m_rma.png' class='m_rma'
-                            height='50'>RMA70-12</td>
-                    <td class="m_alcohol"><img src='../src/image/material/middle/m_alcohol.png' class='m_alcohol'
-                            height='50'>合成コール</td>
-                    <td class="m_rock"><img src='../src/image/material/middle/m_rock.png' class='m_rock'
-                            height='50'>中級源岩</td>
-                    <td class="m_souchi"><img src='../src/image/material/middle/m_souchi.png' class='m_souchi'
-                            height='50'>中級装置</td>
-                </tr>
-                <tr>
-                    <td class="m_ester"><img src='../src/image/material/middle/m_ester.png' class='m_ester'
-                            height='50'>中級エステル</td>
-                    <td class="m_glucose"><img src='../src/image/material/middle/m_glucose.png' class='m_glucose'
-                            height='50'>中級糖源</td>
-                    <td class="m_iron"><img src='../src/image/material/middle/m_iron.png' class='m_iron'
-                            height='50'>中級異鉄</td>
-                    <td class="m_achetone"><img src='../src/image/material/middle/m_achetone.png' class='m_achetone'
-                            height='50'>中級アケトン</td>
-                    <td class="m_gel"><img src='../src/image/material/middle/m_gel.png' class='m_gel' height='50'>人工ゲル
-                    </td>
-                    <td class="m_alloy"><img src='../src/image/material/middle/m_alloy.png' class='m_alloy'
-                            height='50'>熾合金</td>
-                </tr>
-            </table>
-            <table class="materialTable">
-                <tr>
-                    <td class="h_manganese"><img src='../src/image/material/high/h_manganese.png' class='h_manganese'
-                            height='50'>上級マンガン</td>
-                    <td class="h_toishi"><img src='../src/image/material/high/h_toishi.png' class='h_toishi'
-                            height='50'>上級砥石</td>
-                    <td class="h_rma"><img src='../src/image/material/high/h_rma.png' class='h_rma' height='50'>RMA70-24
-                    </td>
-                    <td class="h_alcohol"><img src='../src/image/material/high/h_alcohol.png' class='h_alcohol'
-                            height='50'>上級合成コール</td>
-                    <td class="h_rock"><img src='../src/image/material/high/h_rock.png' class='h_rock' height='50'>上級源岩
-                    </td>
-                    <td class="h_souchi"><img src='../src/image/material/high/h_souchi.png' class='h_souchi'
-                            height='50'>上級装置</td>
-                <tr>
-                    <td class="h_ester"><img src='../src/image/material/high/h_ester.png' class='h_ester'
-                            height='50'>上級エステル</td>
-                    <td class="h_glucose"><img src='../src/image/material/high/h_glucose.png' class='h_glucose'
-                            height='50'>上級糖源</td>
-                    <td class="h_iron"><img src='../src/image/material/high/h_iron.png' class='h_iron' height='50'>上級異鉄
-                    </td>
-                    <td class="h_achetone"><img src='../src/image/material/high/h_achetone.png' class='h_achetone'
-                            height='50'>上級アケトン</td>
-                    <td class="h_gel"><img src='../src/image/material/high/h_gel.png' class='h_gel' height='50'>融合ゲル
-                    </td>
-                    <td class="m_alloy"><img src='../src/image/material/middle/m_alloy.png' class='m_alloy'
-                            height='50'>合成熾合金</td>
-                </tr>
-            </table>
-            <table class="materialTable">
-                <tr>
-                    <td class="e_d32"><img src='../src/image/material/highEnd/e_d32.png' class='e_d32' height='50'>D32鋼
-                    </td>
-                    <td class="e_nano"><img src='../src/image/material/highEnd/e_nano.png' class='e_nano'
-                            height='50'>ナノフレーク</td>
-                    <td class="e_fusion"><img src='../src/image/material/highEnd/e_fusion.png' class='h_fusion'
-                            height='50'>融合材</td>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <footer></footer>
-    <!-- javascript内で別の外部ファイルを読み込む時は type="module" を設定 -->
-    <script src="../js/header.js" type="module"></script>
-    <script src="../js/material.js" type="module"></script>
+  <header></header>
+  <main>
+    <section class="flexBox">
+      <div id="title">
+        <div id="materialName"></div>
+        <nav id="changeDesciription">
+          <ul>
+            <li id="stageToGet">収集場所</li>
+            <li id="superiorMaterial">上位素材</li>
+            <li id="lowMaterial">下位素材</li>
+          </ul>
+        </nav>
+      </div>
+      <div id="description"></div>
+    </section>
+    <section>
+      <table class="materialTable">
+        <tr>
+          <td class="b_rock"><img src='../src/image/material/basic/b_rock.png' class='b_rock' height='50'>源岩鉱
+          </td>
+          <td class="b_souchi"><img src='../src/image/material/basic/b_souchi.png' class='b_souchi' height='50'>破損装置
+          </td>
+          <td class="b_ester"><img src='../src/image/material/basic/b_ester.png' class='b_ester' height='50'>エステル原料</td>
+          <td class="b_glucose"><img src='../src/image/material/basic/b_glucose.png' class='b_glucose' height='50'>ブドウ糖
+          </td>
+          <td class="b_iron"><img src='../src/image/material/basic/b_iron.png' class='b_iron' height='50'>異鉄の欠片</td>
+          <td class="b_achetone"><img src='../src/image/material/basic/b_achetone.png' class='b_achetone'
+              height='50'>アケトン試剤</td>
+        </tr>
+      </table>
+      <table class="materialTable">
+        <tr>
+          <td class="l_rock"><img src='../src/image/material/low/l_rock.png' class='l_rock' height='50'>初級源岩
+          </td>
+          <td class="l_souchi"><img src='../src/image/material/low/l_souchi.png' class='l_souchi' height='50'>初級装置</td>
+          <td class="l_ester"><img src='../src/image/material/low/l_ester.png' class='l_ester' height='50'>初級エステル</td>
+          <td class="l_glucose"><img src='../src/image/material/low/l_glucose.png' class='l_glucose' height='50'>初級糖源
+          </td>
+          <td class="l_iron"><img src='../src/image/material/low/l_iron.png' class='l_iron' height='50'>初級異鉄
+          </td>
+          <td class="l_achetone"><img src='../src/image/material/low/l_achetone.png' class='l_achetone'
+              height='50'>初級アケトン</td>
+        </tr>
+      </table>
+      <table class="materialTable">
+        <tr>
+          <td class="m_manganese"><img src='../src/image/material/middle/m_manganese.png' class='m_manganese'
+              height='50'>マンガン</td>
+          <td class="m_toishi"><img src='../src/image/material/middle/m_toishi.png' class='m_toishi' height='50'>砥石</td>
+          <td class="m_rma"><img src='../src/image/material/middle/m_rma.png' class='m_rma' height='50'>RMA70-12</td>
+          <td class="m_alcohol"><img src='../src/image/material/middle/m_alcohol.png' class='m_alcohol'
+              height='50'>合成コール</td>
+          <td class="m_rock"><img src='../src/image/material/middle/m_rock.png' class='m_rock' height='50'>中級源岩</td>
+          <td class="m_souchi"><img src='../src/image/material/middle/m_souchi.png' class='m_souchi' height='50'>中級装置
+          </td>
+        </tr>
+        <tr>
+          <td class="m_ester"><img src='../src/image/material/middle/m_ester.png' class='m_ester' height='50'>中級エステル
+          </td>
+          <td class="m_glucose"><img src='../src/image/material/middle/m_glucose.png' class='m_glucose' height='50'>中級糖源
+          </td>
+          <td class="m_iron"><img src='../src/image/material/middle/m_iron.png' class='m_iron' height='50'>中級異鉄</td>
+          <td class="m_achetone"><img src='../src/image/material/middle/m_achetone.png' class='m_achetone'
+              height='50'>中級アケトン</td>
+          <td class="m_gel"><img src='../src/image/material/middle/m_gel.png' class='m_gel' height='50'>人工ゲル
+          </td>
+          <td class="m_alloy"><img src='../src/image/material/middle/m_alloy.png' class='m_alloy' height='50'>熾合金</td>
+        </tr>
+      </table>
+      <table class="materialTable">
+        <tr>
+          <td class="h_manganese"><img src='../src/image/material/high/h_manganese.png' class='h_manganese'
+              height='50'>上級マンガン</td>
+          <td class="h_toishi"><img src='../src/image/material/high/h_toishi.png' class='h_toishi' height='50'>上級砥石</td>
+          <td class="h_rma"><img src='../src/image/material/high/h_rma.png' class='h_rma' height='50'>RMA70-24
+          </td>
+          <td class="h_alcohol"><img src='../src/image/material/high/h_alcohol.png' class='h_alcohol'
+              height='50'>上級合成コール</td>
+          <td class="h_rock"><img src='../src/image/material/high/h_rock.png' class='h_rock' height='50'>上級源岩
+          </td>
+          <td class="h_souchi"><img src='../src/image/material/high/h_souchi.png' class='h_souchi' height='50'>上級装置</td>
+        <tr>
+          <td class="h_ester"><img src='../src/image/material/high/h_ester.png' class='h_ester' height='50'>上級エステル</td>
+          <td class="h_glucose"><img src='../src/image/material/high/h_glucose.png' class='h_glucose' height='50'>上級糖源
+          </td>
+          <td class="h_iron"><img src='../src/image/material/high/h_iron.png' class='h_iron' height='50'>上級異鉄
+          </td>
+          <td class="h_achetone"><img src='../src/image/material/high/h_achetone.png' class='h_achetone'
+              height='50'>上級アケトン</td>
+          <td class="h_gel"><img src='../src/image/material/high/h_gel.png' class='h_gel' height='50'>融合ゲル
+          </td>
+          <td class="m_alloy"><img src='../src/image/material/middle/m_alloy.png' class='m_alloy' height='50'>合成熾合金</td>
+        </tr>
+      </table>
+      <table class="materialTable">
+        <tr>
+          <td class="e_d32"><img src='../src/image/material/highEnd/e_d32.png' class='e_d32' height='50'>D32鋼
+          </td>
+          <td class="e_nano"><img src='../src/image/material/highEnd/e_nano.png' class='e_nano' height='50'>ナノフレーク</td>
+          <td class="e_fusion"><img src='../src/image/material/highEnd/e_fusion.png' class='h_fusion' height='50'>融合材
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+  <footer></footer>
+  <!-- javascript内で別の外部ファイルを読み込む時は type="module" を設定 -->
+  <script src="../js/header.js" type="module"></script>
+  <script src="../js/material.js" type="module"></script>
 </body>
 
 </html>

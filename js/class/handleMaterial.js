@@ -5,91 +5,91 @@ import convertMaterialIdToJsonPath from "../util/convertMaterialIdToJsonPath.js"
 import convertRecipieToTag from "../convertTag/convertRecipieToTag.js";
 
 export default class handleMaterial {
-    constructor(id) {
-        this._id = id;
-        this.jsonPath = convertMaterialIdToJsonPath(id);
+  constructor(id) {
+    this._id = id;
+    this.jsonPath = convertMaterialIdToJsonPath(id);
+  }
+
+  get id() { return this._id };
+  set id(val) {
+    this._id = val
+    this.jsonPath = convertMaterialIdToJsonPath(this.id); // JsonPathは素材IDに依存する
+  };
+
+  // 素材名と画像をHTMLへ出力する
+  async showMaterialNameAndImg() {
+    // JSONから素材のIDのみを抽出
+    const response = await fetch(this.jsonPath);
+    const data = await response.json();
+    const materialList = data.materials.filter(k => k.id === this._id)[0];
+
+    // 出力
+    document.getElementById("materialName").innerHTML =
+      `${convertMaterialIdToImgTag(materialList.id)}${materialList.name}`;
+  }
+
+  // 収集場所を出力する
+  async showStagesToGet() {
+    // JSONから必要なデータを抽出
+    const response = await fetch(this.jsonPath);
+    const data = await response.json();
+    const materialList = data.materials.filter(k => k.id === this._id)[0];
+    let stages = materialList.stageToGet;
+
+    // 出力
+    let message = "<p><収集場所></p>";
+    for (const stage of stages) {
+      message = message + `<p>${stage}</p>`;
     }
+    document.getElementById("description").innerHTML = message;
+  }
 
-    get id() { return this._id };
-    set id(val) {
-        this._id = val
-        this.jsonPath = convertMaterialIdToJsonPath(this.id); // JsonPathは素材IDに依存する
-    };
+  // 上位素材を表示する
+  async showSuperiorMaterial() {
+    // JSONから必要なデータを抽出
+    const response = await fetch(this.jsonPath);
+    const data = await response.json();
+    const materialList = data.materials.filter(k => k.id === this._id)[0];
+    const superiorMaterials = materialList.superiorMaterial;
 
-    // 素材名と画像をHTMLへ出力する
-    async showMaterialNameAndImg() {
-        // JSONから素材のIDのみを抽出
-        const response = await fetch(this.jsonPath);
-        const data = await response.json();
-        const materialList = data.materials.filter(k => k.id === this._id)[0];
+    // 出力
+    let message = "<p><上位素材>";
+    if (superiorMaterials) {
+      for (const superiorMaterial of superiorMaterials) {
+        // 上位素材画像を表示する
+        message = message + `${convertMaterialIdToImgTag(superiorMaterial.id)}`;
 
-        // 出力
-        document.getElementById("materialName").innerHTML =
-            `${convertMaterialIdToImgTag(materialList.id)}${materialList.name}`;
-    }
-
-    // 収集場所を出力する
-    async showStagesToGet() {
-        // JSONから必要なデータを抽出
-        const response = await fetch(this.jsonPath);
-        const data = await response.json();
-        const materialList = data.materials.filter(k => k.id === this._id)[0];
-        let stages = materialList.stageToGet;
-
-        // 出力
-        let message = "<p><収集場所></p>";
-        for (const stage of stages) {
-            message = message + `<p>${stage}</p>`;
-        }
-        document.getElementById("description").innerHTML = message;
-    }
-
-    // 上位素材を表示する
-    async showSuperiorMaterial() {
-        // JSONから必要なデータを抽出
-        const response = await fetch(this.jsonPath);
-        const data = await response.json();
-        const materialList = data.materials.filter(k => k.id === this._id)[0];
-        const superiorMaterials = materialList.superiorMaterial;
-
-        // 出力
-        let message = "<p><上位素材>";
-        if (superiorMaterials) {
-            for (const superiorMaterial of superiorMaterials) {
-                // 上位素材画像を表示する
-                message = message + `${convertMaterialIdToImgTag(superiorMaterial.id)}`;
-
-                // 上位素材名を表示する
-                message = message + `${superiorMaterial.name}<br>`;
-
-                // 必要素材を [画像]x[個数]の形式で表示
-                message = message +
-                    `必要素材: ${convertRecipieToTag(superiorMaterial.recipie)}</$>`;
-            }
-        } else {
-            message = message + "<br>上位素材はありません。</p>"
-        }
-
-        document.getElementById("description").innerHTML = message;
-    }
-
-    // 下位素材を表示する
-    async showLowMaterial() {
-        // JSONから必要なデータを抽出
-        const response = await fetch(this.jsonPath);
-        const data = await response.json();
-        const materialList = data.materials.filter(k => k.id === this._id)[0];
-        const lowMaterialRecipie = materialList.lowMaterialRecipie;
+        // 上位素材名を表示する
+        message = message + `${superiorMaterial.name}<br>`;
 
         // 必要素材を [画像]x[個数]の形式で表示
-        let message = "<p><下位素材>";
-        if (lowMaterialRecipie) {
-            message = message +
-                `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie)}</p>`;
-        } else {
-            message = message + "<br>下位素材はありません。</p>"
-        }
-
-        document.getElementById("description").innerHTML = message;
+        message = message +
+          `必要素材: ${convertRecipieToTag(superiorMaterial.recipie)}</$>`;
+      }
+    } else {
+      message = message + "<br>上位素材はありません。</p>"
     }
+
+    document.getElementById("description").innerHTML = message;
+  }
+
+  // 下位素材を表示する
+  async showLowMaterial() {
+    // JSONから必要なデータを抽出
+    const response = await fetch(this.jsonPath);
+    const data = await response.json();
+    const materialList = data.materials.filter(k => k.id === this._id)[0];
+    const lowMaterialRecipie = materialList.lowMaterialRecipie;
+
+    // 必要素材を [画像]x[個数]の形式で表示
+    let message = "<p><下位素材>";
+    if (lowMaterialRecipie) {
+      message = message +
+        `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie)}</p>`;
+    } else {
+      message = message + "<br>下位素材はありません。</p>"
+    }
+
+    document.getElementById("description").innerHTML = message;
+  }
 }

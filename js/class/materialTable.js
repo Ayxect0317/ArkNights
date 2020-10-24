@@ -14,7 +14,7 @@ export default class materialTable {
 
     // 表の作成
     let htmlConstruction = ""
-    for (let i=0; i<data.materials.length; i++) {
+    for (let i = 0; i < data.materials.length; i++) {
       const divideNum = 6; // trタグを挿入する間隔
 
       // trタグを挿入

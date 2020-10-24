@@ -1,53 +1,53 @@
 #materialName, #changeDesciription li, #description {
-    background-color: hsl(0, 0%, 20%);
-    border: 1px solid white;
-    font-size: 1.5em;
-    margin: 0 20px;
+  background-color: hsl(0, 0%, 20%);
+  border: 1px solid white;
+  font-size: 1.5em;
+  margin: 0 20px;
 }
 
 #title {
-    flex-basis: 450px;
+  flex-basis: 450px;
 }
 
 #materialName {
-    margin-bottom: 20px;
-    padding: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 #materialName img, #description img {
-    padding: 5px .25em;
-    vertical-align: middle; /* 画像と文字を上下中央で揃える */
+  padding: 5px .25em;
+  vertical-align: middle; /* 画像と文字を上下中央で揃える */
 }
 
 #changeDesciription ul {
-    padding: 0; /* マーカーを消したことで発生する左側の空白を除去 */
+  padding: 0; /* マーカーを消したことで発生する左側の空白を除去 */
 }
 
 #changeDesciription li {
-    list-style: none;
-    text-align: center;
-    padding: 10px 0;
+  list-style: none;
+  text-align: center;
+  padding: 10px 0;
 }
 
 #changeDesciription li:hover {
-    background-color: royalblue;
+  background-color: royalblue;
 }
 
 #description {
-    flex-basis: 800px;
-    padding-left: 1em;
+  flex-basis: 800px;
+  padding-left: 1em;
 }
 
 .materialTable {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .materialTable td {
-    padding: 10px 0;
-    width: 200px;
+  padding: 10px 0;
+  width: 200px;
 }
 
 .materialTable img {
-    padding-right: .25em;
-    vertical-align: middle; /* 画像と文字を上下中央で揃える */
+  padding-right: .25em;
+  vertical-align: middle; /* 画像と文字を上下中央で揃える */
 }

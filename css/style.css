@@ -1,53 +1,53 @@
 /* -----
-    全ページの共通設定を記述
+  全ページの共通設定を記述
 ----- */
 
+  /* ブラウザのデフォルトの余白を削除 */
 * {
-    /* ブラウザデフォルトの余白を削除 */
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
-    background-color: lightsteelblue;
+  background-color: lightsteelblue;
 }
 
 body {
-    color: white;
-    font-family: 'Montserrat', 'Kosugi', sans-serif;
-    font-size: 24px;
+  color: white;
+  font-family: 'Montserrat', 'Kosugi', sans-serif;
+  font-size: 24px;
 }
 
 section {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 table th, table td {
-    border: solid 2px lightsteelblue;
-    background-color: #333333;
-    text-align: center;
+  border: solid 2px lightsteelblue;
+  background-color: #333333;
+  text-align: center;
 }
 
 
-/* flexBoxの共通設定 */
+/* FlexBoxの共通設定 */
 
 .flexBox {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .flexBox li {
-    list-style: none;
-    margin: auto 0; /* 上下中央揃え */
-    text-decoration: none;
+  list-style: none;
+  margin: auto 0; /* 上下中央揃え */
+  text-decoration: none;
 }

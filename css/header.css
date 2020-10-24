@@ -1,31 +1,27 @@
 header {
-    margin: 0;
-    width: 100%;
-    background-color: navy;
+  margin: 0;
+  width: 100%;
+  background-color: navy;
 }
 
 #navigation {
-    display: -webkit-flex;
-    display: flex;
-}
-
-#navigation ul{
-    /*padding: 0; /* マーカーを消したことで発生する左側の空白を除去 */
+  display: -webkit-flex;
+  display: flex;
 }
 
 #navigation li{
-    background-color: navy;
-    border-right: 2px solid white;
-    color: white;
-    font-size: 1.5em;
-    padding: 10px 40px;
+  background-color: navy;
+  border-right: 2px solid white;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px 40px;
 }
 
 #navigation li:hover {
-    background-color: royalblue;
+  background-color: royalblue;
 }
 
 #nowTime {
-    font-size: 1.2em;
-    margin: auto 20px auto auto; /* margin-right を auto に設定することで右端に寄せる */
+  font-size: 1.2em;
+  margin: auto 20px auto auto; /* margin-right を auto に設定することで右端に寄せる */
 }
