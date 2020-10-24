@@ -24,12 +24,34 @@ document.getElementById("lowMaterial").onclick = () => { handleM.showLowMaterial
 
 /* -----
     section下部のDOM操作
-    現在は直接HTMLファイルに書き込むため実行しない
-// 素材一覧表を作成する
-let matTable = new materialTable();
-matTable.create();
 ----- */
 
+// 素材一覧表を作成する
+/*
+現在は直接HTMLファイルに書き込むため実行しない
+let matTable = new materialTable();
+matTable.create();
+*/
+
+// タブ選択で素材の品質を変更できるようにする
+
+// 中級素材をデフォルトのActiveに設定
+document.getElementsByClassName("materialTable content3")[0].classList.add("active");
+// spanタグがクリックされた時、Activeを変更
+document.querySelectorAll(".tab-buttons span").forEach(span => {
+  span.onclick = () => {
+    // Activeを全て消去
+    document.querySelectorAll(".materialTable").forEach(table => { table.classList.remove("active"); })
+    document.getElementById("lamp").classList.remove(
+      "content1", "content2", "content3", "content4", "content5"
+    );
+
+    // clickされたspanのクラス名をActiveに
+    document.getElementsByClassName(`materialTable ${span.className}`)[0].classList.add("active");
+    document.getElementById("lamp").classList.add(span.className);
+    console.log(document.getElementById("lamp").className);
+  }
+})
 
 // 素材一覧から素材をクリックしたとき、section上部をクリックされた素材の情報へ更新する
 /* 基礎素材 */

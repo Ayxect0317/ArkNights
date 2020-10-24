@@ -1,3 +1,7 @@
+/* -----
+  上部Section
+----- */
+
 #materialName, #changeDesciription li, #description {
   background-color: hsl(0, 0%, 20%);
   border: 1px solid white;
@@ -24,6 +28,7 @@
 }
 
 #changeDesciription li {
+  cursor: pointer;
   list-style: none;
   text-align: center;
   padding: 10px 0;
@@ -38,16 +43,71 @@
   padding-left: 1em;
 }
 
+/* -----
+  下部Section
+----- */
+
 .materialTable {
   margin: 0 auto;
 }
 
 .materialTable td {
+  cursor: pointer;
+  font-size: .9em;
   padding: 10px 0;
-  width: 200px;
+  width: 240px;
 }
 
 .materialTable img {
   padding-right: .25em;
   vertical-align: middle; /* 画像と文字を上下中央で揃える */
+}
+
+
+.tabs{
+  margin: 10px auto;
+  position: relative;
+}
+.tab-buttons span{
+  background: orange;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+  display: block;
+  flex: 1;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+#lamp{
+  width: 20%;
+  height: 3px;
+  background: #333;
+  display: block;
+  position: absolute;
+  top: 40px;
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+}
+
+#lamp.content1, #lamp.content2, #lamp.content3, #lamp.content4, #lamp.content5 {
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+}
+#lamp.content1{ left: 0%; }
+#lamp.content2{ left: 20%; }
+#lamp.content3{ left: 40%; }
+#lamp.content4{ left: 60%; }
+#lamp.content4{ left: 80%; }
+
+.materialTable {
+  display: none;
+}
+
+.active {
+  display: block;
 }

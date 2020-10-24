@@ -18,6 +18,11 @@ body {
   font-size: 24px;
 }
 
+main {
+  margin: 0 auto; /* 左右中央揃え */
+  width: 1200px;
+}
+
 section {
   margin: 15px 0;
 }
