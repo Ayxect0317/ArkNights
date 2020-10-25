@@ -42,14 +42,9 @@ document.querySelectorAll(".tab-buttons span").forEach(span => {
   span.onclick = () => {
     // Activeを全て消去
     document.querySelectorAll(".materialTable").forEach(table => { table.classList.remove("active"); })
-    document.getElementById("lamp").classList.remove(
-      "content1", "content2", "content3", "content4", "content5"
-    );
 
     // clickされたspanのクラス名をActiveに
     document.getElementsByClassName(`materialTable ${span.className}`)[0].classList.add("active");
-    document.getElementById("lamp").classList.add(span.className);
-    console.log(document.getElementById("lamp").className);
   }
 })
 
