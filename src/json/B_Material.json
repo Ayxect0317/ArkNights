@@ -7,13 +7,22 @@
         {
           "id": "l_rock",
           "name": "初級源岩",
-          "recipie": null
+          "recipie": [
+            {
+              "id": "b_rock",
+              "quantity": 4
+            }
+          ]
         }
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S2-5",
+          "cost": 6,
+          "efficiency": 3,
+          "note": null
+        }
       ]
     },
     {
@@ -33,8 +42,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "2-3",
+          "cost": 12,
+          "efficiency": 7.33,
+          "note": null
+        }
       ]
     },
     {
@@ -54,8 +67,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S2-7",
+          "cost": 12,
+          "efficiency": 5,
+          "note": null
+        }
       ]
     },
     {
@@ -75,8 +92,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S2-6",
+          "cost": 12,
+          "efficiency": 4.8,
+          "note": null
+        }
       ]
     },
     {
@@ -96,8 +117,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S2-8",
+          "cost": 12,
+          "efficiency": 6.75,
+          "note": null
+        }
       ]
     },
     {
@@ -117,8 +142,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "2-6",
+          "cost": 6,
+          "efficiency": 5.85,
+          "note": null
+        }
       ]
     }
   ]

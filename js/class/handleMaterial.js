@@ -38,8 +38,36 @@ export default class handleMaterial {
 
     // 出力
     let message = "<p><収集場所></p>";
-    for (const stage of stages) {
-      message = message + `<p>${stage}</p>`;
+
+    // ステージ、消費理性、理性効率（小数第2位まで）を表示
+    if (stages) {
+      message = message + `<table class="descriptionTable">`;
+      message = message + "<tr><th>Stage</th><th>消費理性</th><th>理性効率</th><th>備考</th></tr>";
+      for (const stage of stages) {
+        // 備考の内容
+        let note = `<span class="note">`; // デフォルトメッセージ
+        if (stage.note === null) {
+          note = note = note + "-";
+        } else if (stage.note === "*1") {
+          note = note + "理性効率は悪いが、<br>副産物のランクが上";
+        } else {
+          note = note + stage.note;
+        }
+        note = note + "</span>"
+
+        message = message +
+          `<tr>
+            <td>${stage.stage}</td>
+            <td>${stage.cost}</td>
+            <td>${stage.efficiency.toFixed(2)}</td>
+            <td>${note}</td>
+          </tr>`;
+      }
+      message = message + "</tr>";
+    } else {
+      message = message +
+        `<span class="note">直接ドロップするステージはありません。<br>
+        [下位素材]タブより、合成素材を確認してください。</span>`;
     }
     document.getElementById("description").innerHTML = message;
   }

@@ -25,8 +25,24 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "3-2",
+          "cost": 15,
+          "efficiency": 40.2,
+          "note": null
+        },
+        {
+          "stage": "4-7",
+          "cost": 18,
+          "efficiency": 60.4,
+          "note": "*1"
+        },
+        {
+          "stage": "6-2",
+          "cost": 18,
+          "efficiency": 60.4,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -54,8 +70,18 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "4-8",
+          "cost": 21,
+          "efficiency": 58.48,
+          "note": null
+        },
+        {
+          "stage": "5-7",
+          "cost": 21,
+          "efficiency": 60.86,
+          "note": null
+        }
       ]
     },
     {
@@ -83,8 +109,18 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "2-10",
+          "cost": 15,
+          "efficiency": 53.1,
+          "note": null
+        },
+        {
+          "stage": "4-9",
+          "cost": 21,
+          "efficiency": 70,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -112,8 +148,18 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "4-4",
+          "cost": 18,
+          "efficiency": 48.3,
+          "note": null
+        },
+        {
+          "stage": "6-11",
+          "cost": 0,
+          "efficiency": 43.09,
+          "note": "理性効率は良いが、上級素材はドロップしない"
+        }
       ]
     },
     {
@@ -138,8 +184,24 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "2-4",
+          "cost": 12,
+          "efficiency": 27.58,
+          "note": null
+        },
+        {
+          "stage": "4-6",
+          "cost": 18,
+          "efficiency": 33.8,
+          "note": "*1"
+        },
+        {
+          "stage": "6-5",
+          "cost": 18,
+          "efficiency": 29.82,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -172,8 +234,18 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "3-4",
+          "cost": 15,
+          "efficiency": 55.2,
+          "note": null
+        },
+        {
+          "stage": "5-10",
+          "cost": 21,
+          "efficiency": 67.03,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -206,8 +278,18 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "2-6",
+          "cost": 12,
+          "efficiency": 33.3,
+          "note": null
+        },
+        {
+          "stage": "5-3",
+          "cost": 18,
+          "efficiency": 36.85,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -240,8 +322,18 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "2-5",
+          "cost": 12,
+          "efficiency": 32.3,
+          "note": null
+        },
+        {
+          "stage": "4-2",
+          "cost": 18,
+          "efficiency": 46,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -274,8 +366,18 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-3",
+          "cost": 15,
+          "efficiency": 55,
+          "note": null
+        },
+        {
+          "stage": "S4-1",
+          "cost": 18,
+          "efficiency": 56.5,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -308,8 +410,24 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "3-1",
+          "cost": 15,
+          "efficiency": 41,
+          "note": null
+        },
+        {
+          "stage": "4-5",
+          "cost": 18,
+          "efficiency": 57.6,
+          "note": "*1"
+        },
+        {
+          "stage": "5-8",
+          "cost": 18,
+          "efficiency": 57.6,
+          "note": "*1"
+        }
       ]
     },
     {
@@ -337,8 +455,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S4-10",
+          "cost": 18,
+          "efficiency": 62.64,
+          "note": null
+        }
       ]
     },
     {
@@ -366,8 +488,12 @@
       ],
       "lowMaterialRecipie": null,
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-6",
+          "cost": 15,
+          "efficiency": 39.31,
+          "note": null
+        }
       ]
     }
   ]

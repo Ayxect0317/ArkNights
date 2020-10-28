@@ -45,6 +45,21 @@
   padding-left: 1em;
 }
 
+.descriptionTable {
+  font-size: 0.7em;
+  margin: 0 10px;
+  padding: 2px;
+}
+
+.descriptionTable td {
+  padding: 2px 5px;
+  min-width: 120px;
+}
+
+.note {
+  font-size: 0.7em;
+}
+
 /* -----
   下部Section
 ----- */

@@ -22,8 +22,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "1-7",
+          "cost": 6,
+          "efficiency": 4.83,
+          "note": null
+        }
       ]
     },
     {
@@ -48,8 +52,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-4",
+          "cost": 15,
+          "efficiency": 16.99,
+          "note": null
+        }
       ]
     },
     {
@@ -74,8 +82,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-2",
+          "cost": 15,
+          "efficiency": 9.26,
+          "note": null
+        }
       ]
     },
     {
@@ -100,8 +112,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-1",
+          "cost": 15,
+          "efficiency": 9.14,
+          "note": null
+        }
       ]
     },
     {
@@ -126,8 +142,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-3",
+          "cost": 15,
+          "efficiency": 12.5,
+          "note": null
+        }
       ]
     },
     {
@@ -152,8 +172,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S3-7",
+          "cost": 15,
+          "efficiency": 12.22,
+          "note": null
+        }
       ]
     }
   ]

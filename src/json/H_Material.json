@@ -38,8 +38,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "3-2",
+          "cost": 15,
+          "efficiency": 150.7,
+          "note": "直接ドロップは理性効率が落ちるため、下位素材から合成することを推奨"
+        }
       ]
     },
     {
@@ -80,8 +84,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "5-7",
+          "cost": 21,
+          "efficiency": 121.9,
+          "note": "異鉄が十分にある場合、3-3周回推奨"
+        }
       ]
     },
     {
@@ -122,8 +130,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "4-9",
+          "cost": 21,
+          "efficiency": 126.1,
+          "note": null
+        }
       ]
     },
     {
@@ -160,8 +172,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "4-4",
+          "cost": 18,
+          "efficiency": 117,
+          "note": null
+        }
       ]
     },
     {
@@ -228,8 +244,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "5-10",
+          "cost": 21,
+          "efficiency": 126.6,
+          "note": "源岩が十分にある場合、3-4周回推奨"
+        }
       ]
     },
     {
@@ -251,8 +271,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "3-8",
+          "cost": 18,
+          "efficiency": 128.9,
+          "note": null
+        }
       ]
     },
     {
@@ -274,8 +298,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "4-2",
+          "cost": 18,
+          "efficiency": 127.6,
+          "note": null
+        }
       ]
     },
     {
@@ -316,8 +344,12 @@
         }
       ],
       "stageToGet": [
-        "0-0",
-        "0-1"
+        {
+          "stage": "S4-1",
+          "cost": 35,
+          "efficiency": 163.7,
+          "note": null
+        }
       ]
     },
     {
@@ -380,10 +412,7 @@
           "quantity": 1
         }
       ],
-      "stageToGet": [
-        "0-0",
-        "0-1"
-      ]
+      "stageToGet": null
     },
     {
       "id": "m_alloy",
@@ -403,10 +432,7 @@
           "quantity": 1
         }
       ],
-      "stageToGet": [
-        "0-0",
-        "0-1"
-      ]
+      "stageToGet": null
     }
   ]
 }
