@@ -1,6 +1,6 @@
 "use strict";
 
-import convertMaterialIdToImgTag from "../convertTag/convertMaterialIdToImgTag.js"
+import convertMaterialIdToImgTag from "../func/convertMaterialIdToImgTag.js"
 
 /*----
   素材一覧表に関するクラス

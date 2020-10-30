@@ -1,6 +1,6 @@
 "use strict";
 
-import zeroPadding from "../util/zeroPadding.js";
+import zeroPadding from "./zeroPadding.js";
 
 // 現在の時刻を文字列として返す
 function calcNowDate() {

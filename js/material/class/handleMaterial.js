@@ -1,8 +1,8 @@
 "use strict";
 
-import convertMaterialIdToImgTag from "../convertTag/convertMaterialIdToImgTag.js";
-import convertMaterialIdToJsonPath from "../util/convertMaterialIdToJsonPath.js";
-import convertRecipieToTag from "../convertTag/convertRecipieToTag.js";
+import convertMaterialIdToImgTag from "../func/convertMaterialIdToImgTag.js";
+import convertMaterialIdToJsonPath from "../func/convertMaterialIdToJsonPath.js";
+import convertRecipieToTag from "../func/convertRecipieToTag.js";
 
 export default class handleMaterial {
   constructor(id) {

@@ -1,6 +1,6 @@
 "use strict";
 
-import convertMaterialIdToQuality from "../util/convertMaterialIdToQuality.js"
+import convertMaterialIdToQuality from "./convertMaterialIdToQuality.js"
 
 // 素材IDから画像パスを取得する
 // 第2引数が整数として設定されていれば、heightを第2引数に
