@@ -2,11 +2,9 @@
   "materials": [
     {
       "id": "b_rock",
-      "name": "源岩鉱",
       "superiorMaterial": [
         {
           "id": "l_rock",
-          "name": "初級源岩",
           "recipie": [
             {
               "id": "b_rock",
@@ -27,11 +25,9 @@
     },
     {
       "id": "b_souchi",
-      "name": "破損装置",
       "superiorMaterial": [
         {
           "id": "l_souchi",
-          "name": "初級装置",
           "recipie": [
             {
               "id": "b_souchi",
@@ -52,11 +48,9 @@
     },
     {
       "id": "b_ester",
-      "name": "エステル原料",
       "superiorMaterial": [
         {
           "id": "l_ester",
-          "name": "初級エステル",
           "recipie": [
             {
               "id": "b_ester",
@@ -77,11 +71,9 @@
     },
     {
       "id": "b_glucose",
-      "name": "ブドウ糖",
       "superiorMaterial": [
         {
-          "id": "l_clucose",
-          "name": "初級糖源",
+          "id": "l_glucose",
           "recipie": [
             {
               "id": "b_glucose",
@@ -102,11 +94,9 @@
     },
     {
       "id": "b_iron",
-      "name": "異鉄の欠片",
       "superiorMaterial": [
         {
           "id": "l_iron",
-          "name": "初級異鉄",
           "recipie": [
             {
               "id": "b_iron",
@@ -127,11 +117,9 @@
     },
     {
       "id": "b_achetone",
-      "name": "アケトン試剤",
       "superiorMaterial": [
         {
           "id": "l_achetone",
-          "name": "初級アケトン",
           "recipie": [
             {
               "id": "b_achetone",

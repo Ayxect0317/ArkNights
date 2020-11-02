@@ -2,11 +2,9 @@
   "materials": [
     {
       "id": "m_manganese",
-      "name": "マンガン",
       "superiorMaterial": [
         {
           "id": "h_manganese",
-          "name": "上級マンガン",
           "recipie": [
             {
               "id": "m_manganese",
@@ -47,11 +45,9 @@
     },
     {
       "id": "m_toishi",
-      "name": "砥石",
       "superiorMaterial": [
         {
           "id": "h_toishi",
-          "name": "上級砥石",
           "recipie": [
             {
               "id": "m_toishi",
@@ -86,11 +82,9 @@
     },
     {
       "id": "m_rma",
-      "name": "RMA70-12",
       "superiorMaterial": [
         {
           "id": "h_rma",
-          "name": "RMA70-24",
           "recipie": [
             {
               "id": "m_rma",
@@ -125,11 +119,9 @@
     },
     {
       "id": "m_alcohol",
-      "name": "合成コール",
       "superiorMaterial": [
         {
           "id": "h_alcohol",
-          "name": "上級合成コール",
           "recipie": [
             {
               "id": "m_alcohol",
@@ -164,11 +156,9 @@
     },
     {
       "id": "m_rock",
-      "name": "中級源岩",
       "superiorMaterial": [
         {
           "id": "h_rock",
-          "name": "上級源岩",
           "recipie": [
             {
               "id": "m_rock",
@@ -206,11 +196,9 @@
     },
     {
       "id": "m_souchi",
-      "name": "中級装置",
       "superiorMaterial": [
         {
-          "id": "h_soouchi",
-          "name": "上級装置",
+          "id": "h_souchi",
           "recipie": [
             {
               "id": "m_souchi",
@@ -250,11 +238,9 @@
     },
     {
       "id": "m_ester",
-      "name": "中級エステル",
       "superiorMaterial": [
         {
           "id": "h_ester",
-          "name": "上級エステル",
           "recipie": [
             {
               "id": "m_ester",
@@ -294,11 +280,9 @@
     },
     {
       "id": "m_glucose",
-      "name": "中級糖源",
       "superiorMaterial": [
         {
-          "id": "h_clucose",
-          "name": "上級糖源",
+          "id": "h_glucose",
           "recipie": [
             {
               "id": "m_glucose",
@@ -338,11 +322,9 @@
     },
     {
       "id": "m_iron",
-      "name": "中級異鉄",
       "superiorMaterial": [
         {
           "id": "h_iron",
-          "name": "上級異鉄",
           "recipie": [
             {
               "id": "m_iron",
@@ -382,11 +364,9 @@
     },
     {
       "id": "m_achetone",
-      "name": "中級アケトン",
       "superiorMaterial": [
         {
           "id": "h_achetone",
-          "name": "上級アケトン",
           "recipie": [
             {
               "id": "m_achetone",
@@ -432,11 +412,9 @@
     },
     {
       "id": "m_gel",
-      "name": "人工ゲル",
       "superiorMaterial": [
         {
           "id": "h_gel",
-          "name": "融合ゲル",
           "recipie": [
             {
               "id": "m_iron",
@@ -465,11 +443,9 @@
     },
     {
       "id": "m_alloy",
-      "name": "熾合金",
       "superiorMaterial": [
         {
           "id": "h_alloy",
-          "name": "合成熾合金",
           "recipie": [
             {
               "id": "m_souchi",

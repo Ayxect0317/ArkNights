@@ -2,6 +2,7 @@
 
 import convertMaterialIdToImgTag from "../func/convertMaterialIdToImgTag.js";
 import convertMaterialIdToJsonPath from "../func/convertMaterialIdToJsonPath.js";
+import convertMaterialIdToName from "../func/convertMaterialIdToName.js";
 import convertRecipieToTag from "../func/convertRecipieToTag.js";
 
 export default class handleMaterial {
@@ -29,7 +30,7 @@ export default class handleMaterial {
 
     // 出力
     document.getElementById("materialName").innerHTML =
-      `${convertMaterialIdToImgTag(materialList.id)}${materialList.name}`;
+      `${convertMaterialIdToImgTag(materialList.id)}${convertMaterialIdToName(materialList.id)}`;
   }
 
 
@@ -51,15 +52,15 @@ export default class handleMaterial {
     /* -----
       ステージ、消費理性、理性効率（小数第2位まで）を表示
     ----- */
-
     if (stages) {
       message = message + `<table class="descriptionTable">`;
       message = message + "<tr><th>Stage</th><th>消費理性</th><th>理性効率</th><th>備考</th></tr>";
+
       for (const stage of stages) {
         // 備考の内容
-        let note = `<span class="note">`; // デフォルトメッセージ
+        let note = `<span class="note">`;
         if (stage.note === null) {
-          note = note = note + "-";
+          note = note = note + "-"; // デフォルトメッセージ
         } else if (stage.note === "*1") {
           note = note + "理性効率は悪いが、<br>副産物のランクが上";
         } else {
@@ -103,7 +104,7 @@ export default class handleMaterial {
         message = message + `${convertMaterialIdToImgTag(superiorMaterial.id)}`;
 
         // 上位素材名を表示する
-        message = message + `${superiorMaterial.name}<br>`;
+        message = message + `${convertMaterialIdToName(superiorMaterial.id)}<br>`;
 
         // 必要素材を [画像]x[個数]の形式で表示
         message = message +
@@ -134,7 +135,6 @@ export default class handleMaterial {
         `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie)}</p>`;
     } else {
       message = message + `<br><span class="note">下位素材はありません。</span></p>`;
-      console.log(message);
     }
 
     document.getElementById("description").innerHTML = message;

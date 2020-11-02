@@ -2,11 +2,9 @@
   "materials": [
     {
       "id": "h_manganese",
-      "name": "上級マンガン",
       "superiorMaterial": [
         {
           "id": "e_d32",
-          "name": "D32鋼",
           "recipie": [
             {
               "id": "h_manganese",
@@ -48,11 +46,9 @@
     },
     {
       "id": "h_toishi",
-      "name": "上級砥石",
       "superiorMaterial": [
         {
           "id": "e_d32",
-          "name": "D32鋼",
           "recipie": [
             {
               "id": "h_manganese",
@@ -94,11 +90,9 @@
     },
     {
       "id": "h_rma",
-      "name": "RMA70-24",
       "superiorMaterial": [
         {
           "id": "e_d32",
-          "name": "D32鋼",
           "recipie": [
             {
               "id": "h_manganese",
@@ -140,11 +134,9 @@
     },
     {
       "id": "h_alcohol",
-      "name": "上級合成コール",
       "superiorMaterial": [
         {
           "id": "e_nano",
-          "name": "ナノフレーク",
           "recipie": [
             {
               "id": "h_souchi",
@@ -182,11 +174,9 @@
     },
     {
       "id": "h_rock",
-      "name": "上級源岩",
       "superiorMaterial": [
         {
           "id": "e_fusion",
-          "name": "融合材",
           "recipie": [
             {
               "id": "h_rock",
@@ -212,11 +202,9 @@
     },
     {
       "id": "h_souchi",
-      "name": "上級装置",
       "superiorMaterial": [
         {
           "id": "e_nano",
-          "name": "ナノフレーク",
           "recipie": [
             {
               "id": "h_souchi",
@@ -254,7 +242,6 @@
     },
     {
       "id": "h_ester",
-      "name": "上級エステル",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {
@@ -281,7 +268,6 @@
     },
     {
       "id": "h_glucose",
-      "name": "上級糖源",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {
@@ -308,11 +294,9 @@
     },
     {
       "id": "h_iron",
-      "name": "上級異鉄",
       "superiorMaterial": [
         {
           "id": "e_fusion",
-          "name": "融合材",
           "recipie": [
             {
               "id": "h_rock",
@@ -354,11 +338,9 @@
     },
     {
       "id": "h_achetone",
-      "name": "上級アケトン",
       "superiorMaterial": [
         {
           "id": "e_fusion",
-          "name": "融合材",
           "recipie": [
             {
               "id": "h_rock",
@@ -396,7 +378,6 @@
     },
     {
       "id": "h_gel",
-      "name": "融合ゲル",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {
@@ -415,8 +396,7 @@
       "stageToGet": null
     },
     {
-      "id": "m_alloy",
-      "name": "合成熾合金",
+      "id": "h_alloy",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {

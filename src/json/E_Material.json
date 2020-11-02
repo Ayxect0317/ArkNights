@@ -2,7 +2,6 @@
   "materials": [
     {
       "id": "e_d32",
-      "name": "D32鋼",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {
@@ -22,7 +21,6 @@
     },
     {
       "id": "e_nano",
-      "name": "ナノフレーク",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {
@@ -38,7 +36,6 @@
     },
     {
       "id": "e_fusion",
-      "name": "融合材",
       "superiorMaterial": null,
       "lowMaterialRecipie": [
         {
