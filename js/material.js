@@ -1,7 +1,7 @@
 "use strict";
 
-import handleMaterial from "./class/handleMaterial.js";
-import materialTable from "./class/materialTable.js";
+import handleMaterial from "./material/class/handleMaterial.js";
+import materialTable from "./material/class/materialTable.js";
 
 /* -----
     section上部のDOM操作
