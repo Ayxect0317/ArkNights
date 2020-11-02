@@ -16,7 +16,11 @@ export default class handleMaterial {
     this.jsonPath = convertMaterialIdToJsonPath(this.id); // JsonPathは素材IDに依存する
   };
 
-  // 素材名と画像をHTMLへ出力する
+
+  /* ----
+    素材名と画像をHTMLへ出力する
+  ---- */
+
   async showMaterialNameAndImg() {
     // JSONから素材のIDのみを抽出
     const response = await fetch(this.jsonPath);
@@ -28,7 +32,11 @@ export default class handleMaterial {
       `${convertMaterialIdToImgTag(materialList.id)}${materialList.name}`;
   }
 
-  // 収集場所を出力する
+
+  /* -----
+    収集場所を出力する
+  ----- */
+
   async showStagesToGet() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
@@ -39,7 +47,11 @@ export default class handleMaterial {
     // 出力
     let message = "<p><収集場所></p>";
 
-    // ステージ、消費理性、理性効率（小数第2位まで）を表示
+
+    /* -----
+      ステージ、消費理性、理性効率（小数第2位まで）を表示
+    ----- */
+
     if (stages) {
       message = message + `<table class="descriptionTable">`;
       message = message + "<tr><th>Stage</th><th>消費理性</th><th>理性効率</th><th>備考</th></tr>";
@@ -72,7 +84,10 @@ export default class handleMaterial {
     document.getElementById("description").innerHTML = message;
   }
 
-  // 上位素材を表示する
+
+  /* -----
+    上位素材を表示する
+  ----- */
   async showSuperiorMaterial() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
@@ -95,13 +110,16 @@ export default class handleMaterial {
           `必要素材: ${convertRecipieToTag(superiorMaterial.recipie)}</$>`;
       }
     } else {
-      message = message + "<br>上位素材はありません。</p>"
+      message = message + `<br><span class="note">上位素材はありません。</span></p>`;
     }
 
     document.getElementById("description").innerHTML = message;
   }
 
-  // 下位素材を表示する
+
+  /* -----
+    下位素材を表示する
+  ----- */
   async showLowMaterial() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
@@ -115,7 +133,8 @@ export default class handleMaterial {
       message = message +
         `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie)}</p>`;
     } else {
-      message = message + "<br>下位素材はありません。</p>"
+      message = message + `<br><span class="note">下位素材はありません。</span></p>`;
+      console.log(message);
     }
 
     document.getElementById("description").innerHTML = message;

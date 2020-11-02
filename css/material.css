@@ -2,9 +2,9 @@ body {
   color: white;
 }
 
-/* -----
+/* ----------
   上部Section
------ */
+---------- */
 
 #materialName, #changeDesciription li, #description {
   background-color: hsl(0, 0%, 20%);
@@ -64,9 +64,9 @@ body {
   font-size: 0.7em;
 }
 
-/* -----
+/* ----------
   下部Section
------ */
+---------- */
 
 .materialTable {
   margin: 0 auto;

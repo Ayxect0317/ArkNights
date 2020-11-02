@@ -30,7 +30,7 @@
       "name": "破損装置",
       "superiorMaterial": [
         {
-          "id": "l_soouchi",
+          "id": "l_souchi",
           "name": "初級装置",
           "recipie": [
             {
