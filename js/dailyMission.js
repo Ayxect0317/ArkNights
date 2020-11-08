@@ -1,6 +1,6 @@
 "use strict";
 
-import getMessage from "./util/makeMessageForDailyMission.js";
+import getMessage from "./dailyMission/makeMessageForDailyMission.js";
 
 function recalc() {
   function showMessage(dist) {

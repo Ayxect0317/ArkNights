@@ -11,7 +11,7 @@ async function createHeader() {
   document.querySelector("header").innerHTML = header;
 
   // header.jsのDOM構造の読み込みが完了した後動作させる
-  // 単に recalcNowTime() と書くと、header.htmlのDOM構造読み込みより先に実行されてしまう
+  // 単に recalcNowTime() と書くと、header.htmlのDOM構造が読み込まれる前に実行されてしまう
   window.addEventListener("DOMContentLoaded", recalcNowTime());
 }
 
