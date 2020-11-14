@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="height=device-height,initial-scale=1">
+  <title>アークナイツ　あと何個？</title>
+  <link href="../../_common/images/favicon.ico" rel="shortcut icon">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/header.css" rel="stylesheet">
+  <link href="../css/require.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header></header>
+  <main class="flexBox">
+    <section id="input">
+      <form name="selectMaterialForm" iclass="requireForm" action="">
+        <select name="material">
+          必要素材: <option value="h_manganese">上級マンガン</option><br>
+          必要個数: <option value="h_toishi"">上級砥石</option><br>
+        </select>
+        <select name="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <input type="button" id="exec" class="btn" value="Exec">
+      </form>
+    </section>
+    <section id="output">
+      結果を表示
+      <p id="result"></p>
+    </section>
+  </main>
+  <footer></footer>
+  <!-- javascript内で別の外部ファイルを読み込む時は type="module" を設定 -->
+  <script src="../js/header.js" type="module"></script>
+  <script src="../js/require.js" type="module"></script>
+</body>
+
+</html>

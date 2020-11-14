@@ -139,4 +139,23 @@ export default class handleMaterial {
 
     document.getElementById("description").innerHTML = message;
   }
+
+  /* -----
+    下位素材の素材名と個数をリストで返却する
+  ----- */
+  async createLowMaterialList() {
+    // JSONから必要なデータを抽出
+    const response = await fetch(this.jsonPath);
+    const data = await response.json();
+    const materialList = data.materials.filter(k => k.id === this._id)[0];
+    const lowMaterialRecipie = materialList.lowMaterialRecipie;
+
+    // 連想配列の作成
+    let lowMaterialList = {};
+    for (let k of lowMaterialRecipie) {
+      lowMaterialList[k.id] = k.quantity;
+    }
+
+    return lowMaterialList;
+  }
 }

@@ -45,9 +45,33 @@ table th, table td {
   text-align: center;
 }
 
+/* Formの共通設定 */
+form select, form .btn{
+  background-color: #333333;
+  color: white;
+  font-family: 'Montserrat', 'Kosugi', sans-serif;
+  font-size: 24px;
+}
+
+form select {
+  padding: 2px;
+}
+
+form .btn {
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+form .btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px); /* 下に動く */
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /* 影を小さく */
+  border-bottom: none;
+}
 
 /* FlexBoxの共通設定 */
-
 .flexBox {
   display: -webkit-flex;
   display: flex;
