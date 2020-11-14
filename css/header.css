@@ -1,8 +1,8 @@
 header {
+  background-color: navy;
   color: white;
   margin: 0;
   width: 100%;
-  background-color: navy;
 }
 
 #navigation {
@@ -16,7 +16,7 @@ header {
   color: white;
   font-size: 1.5em;
   text-decoration: none;
-  padding: 10px 40px;
+  padding: 10px .5em;
 }
 
 #navigation li:hover {

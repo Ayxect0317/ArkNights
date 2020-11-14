@@ -11,6 +11,7 @@
   <link href="../css/material.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,800&display=swap" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,6 +30,31 @@
       </div>
       <div id="description"></div>
     </section>
+    <section id="qParent">
+      <span id="js-show-popup" class="qContent">
+        <i class="fas fa-question-circle"></i> 理性効率とは？
+      </span>
+    </section>
+    <!-- モーダル -->
+    <div class="popup" id="js-popup">
+      <div class="popup-inner">
+        <div id="js-close-btn" class="close-btn"><i class="fas fa-times"></i></div>
+        <h2><i class="fas fa-question-circle"></i> 理性効率とは？</h2>
+        <p>
+          <u>素材を1つ集めるのに必要な理性の期待値</u>です。<br>
+          この値が小さいほど、少ない理性で素材を収集することができます。
+        </p>
+        <p>
+          計算式は [ステージの消費理性] / [素材のドロップ率] です。<br>
+          （副産物は考慮に入れていません）
+        </p>
+        <p>
+          例えば、ステージの消費理性が20、ドロップ率が50%の場合、<br>
+          理性効率は 20 / 0.5 = 40 となります。
+        </p>
+      </div>
+      <div class="black-background" id="js-black-bg"></div>
+    </div>
     <section>
       <div class="tabs">
         <div class="tab-buttons flexBox">

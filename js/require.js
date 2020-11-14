@@ -1,6 +1,7 @@
 "use strict";
 
 import handleMaterial from "./material/class/handleMaterial.js";
+import convertMaterialIdToImgTag from "./material/func/convertMaterialIdToImgTag.js"
 
 /* -----
     section左上部のDOM操作
@@ -25,13 +26,14 @@ function calcRequireMaterials() {
   let message = "";
 
   // 連想配列をメッセージに変換
-  // createLowMaterialListはasync関数なので、変数messageのスコープは下記関数内であることに注意
+  // createLowMaterialListはasync関数なので、変数messageのスコープは関数内であることに注意
   handleM.createLowMaterialList().then(lowMaterialList => {
-    for (let key in lowMaterialList) {
-      message = message + `${key}: ${lowMaterialList[key] * quantity} `;
+    for (let matId in lowMaterialList) {
+      message = message +
+        `${convertMaterialIdToImgTag(matId)}x${lowMaterialList[matId] * quantity} `;
     }
     // 出力
-    document.getElementById("result").textContent = message;
+    document.getElementById("result").innerHTML = message;
   })
 
 }

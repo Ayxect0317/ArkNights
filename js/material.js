@@ -4,7 +4,7 @@ import handleMaterial from "./material/class/handleMaterial.js";
 import materialTable from "./material/class/materialTable.js";
 
 /* -----
-    section上部のDOM操作
+    section上段のDOM操作
 ----- */
 
 // html読み込み時、収集場所をデフォルトとして表示
@@ -23,7 +23,33 @@ document.getElementById("lowMaterial").onclick = () => { handleM.showLowMaterial
 
 
 /* -----
-    section下部のDOM操作
+    section中段のDOM操作
+----- */
+
+/* "理性効率とは？" をクリックしたとき、モルダーを表示する */
+// 参考: https://tech-dig.jp/js-modal/
+function popupImage() {
+  const popup = document.getElementById('js-popup');
+  if(!popup) return;
+
+  const blackBg = document.getElementById('js-black-bg');
+  const closeBtn = document.getElementById('js-close-btn');
+  const showBtn = document.getElementById('js-show-popup');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.toggle('is-show');
+    });
+  }
+}
+popupImage();
+
+/* -----
+    section下段のDOM操作
 ----- */
 
 // 素材一覧表を作成する

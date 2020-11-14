@@ -1,0 +1,5 @@
+#output {
+  flex-basis: 880px;
+  margin-left: 20px;
+  vertical-align: middle; /* 画像と文字を上下中央で揃える */
+}

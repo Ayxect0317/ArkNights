@@ -3,7 +3,7 @@ body {
 }
 
 /* ----------
-  上部Section
+  上段Section
 ---------- */
 
 #materialName, #changeDesciription li, #description {
@@ -63,9 +63,83 @@ body {
 .note {
   font-size: 0.7em;
 }
+/* ----------
+  中段Section
+---------- */
+#qParent {
+  text-align: right; /* 右揃えするinline要素の親要素に指定する */
+}
+
+.qContent {
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  margin: 0;
+  padding: 1px 3px;
+}
+
+.popup {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: .6s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9999;
+}
+
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-inner {
+  background-color: #333333;
+  border: 1px solid white;
+  border-radius: 30px;
+  color: white;
+  left: 50%;
+  padding: 20px 50px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  z-index: 2;
+}
+
+.close-btn {
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 50px;
+}
+
+.close-btn i {
+  color: #cccccc;
+  font-size: 30px;
+}
+
+.black-background {
+  background-color: rgba(0,0,0,.8);
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 
 /* ----------
-  下部Section
+  下段Section
 ---------- */
 
 .materialTable {
