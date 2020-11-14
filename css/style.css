@@ -54,6 +54,7 @@ form select, form .btn{
 }
 
 form select {
+  margin-left: .5em;
   padding: 2px;
 }
 

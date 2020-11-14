@@ -18,17 +18,19 @@
   <main class="flexBox">
     <section id="input">
       <form name="selectMaterialForm" iclass="requireForm" action="">
+        必要素材:
         <select name="material">
-          必要素材: <option value="h_manganese">上級マンガン</option><br>
-          必要個数: <option value="h_toishi"">上級砥石</option><br>
-        </select>
+          <option value="h_manganese">上級マンガン</option>
+          <option value="h_toishi"">上級砥石</option>
+        </select><br>
+        必要個数:
         <select name="quantity">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
-        </select>
+        </select><br>
         <input type="button" id="exec" class="btn" value="Exec">
       </form>
     </section>
