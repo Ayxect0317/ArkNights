@@ -2,6 +2,7 @@
 
 import handleMaterial from "./material/class/handleMaterial.js";
 import convertMaterialIdToImgTag from "./material/func/convertMaterialIdToImgTag.js"
+import convertMaterialIdToName from "./material/func/convertMaterialIdToName.js"
 
 /* -----
     section左上部のDOM操作
@@ -23,25 +24,24 @@ function calcRequireMaterials() {
 
   /* 下位素材の連想配列を取得する */
   const handleM = new handleMaterial(material);
-  let message = "";
 
   // 連想配列をメッセージに変換
   // createLowMaterialListはasync関数なので、変数messageのスコープは関数内であることに注意
   handleM.createLowMaterialList().then(lowMaterialList => {
+    // 収集素材と必要数を表示
+    let message = `<p>${convertMaterialIdToName(material)}を ${quantity} 個作成するのに<br>
+      必要な素材は以下の通りです。</p>`;
+    
+    // 必要素材を画像で表示
+    message = message + "<p>";
     for (let matId in lowMaterialList) {
       message = message +
         `${convertMaterialIdToImgTag(matId)}x${lowMaterialList[matId] * quantity} `;
     }
+    message = message + "</p>";
+
     // 出力
     document.getElementById("result").innerHTML = message;
   })
 
 }
-
-/* -----
-    section左下部のDOM操作
------ */
-
-/* -----
-    section右部のDOM操作
------ */
