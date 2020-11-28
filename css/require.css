@@ -1,5 +1,40 @@
+/* -----
+    section共通
+----- */
+#input1, #input2, #output{
+  background-color: pink;
+  border: 1px solid black;
+  padding: 10px 10px 10px 1em;
+}
+
+/* -----
+    section左部
+----- */
+#input {
+  flex-basis: 500px;
+  margin: 0 20px;
+}
+
+#input1, #input2 {
+  margin-bottom: 50px;
+}
+
+/* -----
+    section左上部
+----- */
+
+/* -----
+    section左下部
+----- */
+.hidden {
+  visibility: hidden;
+}
+
+/* -----
+    section右部
+----- */
 #output {
-  flex-basis: 880px;
+  flex-basis: 750px;
   margin-left: 20px;
   vertical-align: middle; /* 画像と文字を上下中央で揃える */
 }
