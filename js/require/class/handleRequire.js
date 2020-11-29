@@ -47,8 +47,8 @@ export default class handleRequire {
     const lowMaterialList = await handleM.createLowMaterialList();
     handleM.createLowMaterialList().then(lowMaterialList => {
       let contentOfForm = `
-        <p>所持数を選択してください</p>
-        <form name="possessionsForm" action="">
+        <p>所持数を選択してください<br>（開発中のため動作いたしません）</p>
+        <form id="input2Form" name="possessionsForm" action="">
       `;
 
       /* selectタグの挿入 */
@@ -61,7 +61,7 @@ export default class handleRequire {
         let matName = convertMaterialIdToName(matId); // 素材名に変換
 
         contentOfForm = contentOfForm + convertMaterialIdToName(matId)
-          + `<select name=mat${i}Num>`
+          + `<select name="mat${i}Num">`
           + option0to20()
           + "</select><br>";
       }
@@ -69,16 +69,11 @@ export default class handleRequire {
       // 閉じタグの挿入
       contentOfForm = contentOfForm + "</form>";
 
-      // DOM要素への変換
-      let doc = new DOMParser().parseFromString(contentOfForm, "text/html")
-      doc = doc.querySelector("form").outerHTML;
-
       // 出力
-      document.getElementById("input2").innerHTML = doc;
+      document.getElementById("input2").innerHTML = contentOfForm;
     })
 
     // フォームを表示
-    const ExtraFormSection = document.getElementById("input2");
-    ExtraFormSection.classList.remove("hidden");
+    document.getElementById("input2").classList.remove("hidden");
   }
 }

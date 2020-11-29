@@ -26,19 +26,24 @@ function calcRequireMaterials() {
   const handleR = new handleRequire(matId, quantity);
   handleR.createResultHtml();
 
-/* -----
-    section左下部のDOM操作
------ */
+  /* -----
+      section左下部のDOM操作
+  ----- */
   handleR.createInput2Html();
 
 
   /* -----
-    所持数更新後の処理
-  // EventListenerの設定 
-  let select0 = document.possessionsForm.mat0Num;
-  let select1 = document.possessionsForm.mat1Num;
-  let select2 = document.possessionsForm.mat2Num;
-
+    所持数更新後の処理（開発中）
+    innerHTMLで生成したFormに対してDOM操作ができない
+  // EventListenerの設定
+  console.log(document.getElementById("input2Form"));
+  let input2Form = document.getElementById("input2Form");
+  let select0 = input2Form.mat0Num;
+  let select1 = input2Form.mat1Num;
+  let select2 = input2Form.mat2Num;
+  console.log(select0);
+  console.log(select1);
+  console.log(select2);
   // 上級源岩は合成に必要な素材が1種類なので、
   // select1, select2がundefinedになる可能性があることに注意
   select0.addEventListener("change", changePossessions);
