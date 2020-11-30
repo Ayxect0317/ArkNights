@@ -2,13 +2,25 @@
 
 import handleMaterial from "./material/class/handleMaterial.js";
 import materialTable from "./material/class/materialTable.js";
+import isMaterialId from "./material/func/isMaterialId.js";
 
 /* -----
     section上段のDOM操作
 ----- */
+// URLのパラメータから素材IDを取得
+let matId = "m_manganese"; //デフォルト値
+if (window.location.search) {
+  // 7文字目以降を取得 (?matid=の部分は必要ないため)
+  const preId = window.location.search.substring(7,window.location.search.length);
+
+  // URLのパラメータが素材IDの一覧に存在するならば、素材IDをデフォルト値から変更
+  if (isMaterialId(preId)) {
+    matId = preId;
+  }
+}
 
 // html読み込み時、収集場所をデフォルトとして表示
-let handleM = new handleMaterial("m_manganese");
+let handleM = new handleMaterial(matId);
 window.addEventListener("DOMContentLoaded", handleM.showMaterialNameAndImg());
 window.addEventListener("DOMContentLoaded", handleM.showStagesToGet());
 

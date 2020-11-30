@@ -1,6 +1,6 @@
 "use strict";
 
-import convertMaterialIdToImgTag from "../func/convertMaterialIdToImgTag.js";
+import convertMaterialIdToLink from "../func/convertMaterialIdToLink.js";
 import convertMaterialIdToJsonPath from "../func/convertMaterialIdToJsonPath.js";
 import convertMaterialIdToName from "../func/convertMaterialIdToName.js";
 import convertRecipieToTag from "../func/convertRecipieToTag.js";
@@ -30,7 +30,7 @@ export default class handleMaterial {
 
     // 出力
     document.getElementById("materialName").innerHTML =
-      `${convertMaterialIdToImgTag(materialList.id)}${convertMaterialIdToName(materialList.id)}`;
+      `${convertMaterialIdToLink(materialList.id)}${convertMaterialIdToName(materialList.id)}`;
   }
 
 
@@ -101,7 +101,7 @@ export default class handleMaterial {
     if (superiorMaterials) {
       for (const superiorMaterial of superiorMaterials) {
         // 上位素材画像を表示する
-        message = message + `${convertMaterialIdToImgTag(superiorMaterial.id)}`;
+        message = message + `${convertMaterialIdToLink(superiorMaterial.id)}`;
 
         // 上位素材名を表示する
         message = message + `${convertMaterialIdToName(superiorMaterial.id)}<br>`;

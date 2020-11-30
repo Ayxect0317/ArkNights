@@ -1,7 +1,7 @@
 "use strict";
 
 import handleMaterial from "../../material/class/handleMaterial.js";
-import convertMaterialIdToImgTag from "../../material/func/convertMaterialIdToImgTag.js";
+import convertMaterialIdToLink from "../../material/func/convertMaterialIdToLink.js";
 import convertMaterialIdToJsonPath from "../../material/func/convertMaterialIdToJsonPath.js";
 import convertMaterialIdToName from "../../material/func/convertMaterialIdToName.js";
 import convertRecipieToTag from "../../material/func/convertRecipieToTag.js";
@@ -29,7 +29,7 @@ export default class handleRequire {
     message = message + "<p>";
     for (let matId in lowMaterialList) {
       message = message
-        + `${convertMaterialIdToImgTag(matId)}x${lowMaterialList[matId] * this._quantity} `;
+        + `${convertMaterialIdToLink(matId, true)}x${lowMaterialList[matId] * this._quantity} `;
     }
     message = message + "</p>";
 
