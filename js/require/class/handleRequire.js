@@ -42,7 +42,7 @@ export default class handleRequire {
     Execボタンが押された時、必要素材に合わせたフォームを表示 (section左下部のDOM操作)
   ----- */
   async createInput2Html() {
-    // 下位素材の連想配列を取得
+    // 下位素材に対して、 {ID: 必要数} 形式で連想配列を取得
     const handleM = new handleMaterial(this._id);
     const lowMaterialList = await handleM.createLowMaterialList();
     handleM.createLowMaterialList().then(lowMaterialList => {

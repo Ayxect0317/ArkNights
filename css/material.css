@@ -6,7 +6,7 @@ body {
   上段Section
 ---------- */
 
-#materialName, #changeDesciription li, #description {
+#materialName, #changeDesciription li, #wrapDescription {
   background-color: hsl(0, 0%, 20%);
   border: 1px solid white;
   margin: 0 20px;
@@ -22,7 +22,7 @@ body {
   padding: 10px;
 }
 
-#materialName img, #description img {
+#materialName img, .description img {
   padding: 5px .25em;
   vertical-align: middle; /* 画像と文字を上下中央で揃える */
 }
@@ -43,10 +43,22 @@ body {
   background-color: royalblue;
 }
 
-#description {
+/* 背景部分 */
+#wrapDescription {
   flex-basis: 800px;
-  font-size: 1.5em;
   padding-left: 1em;
+}
+
+/* 内容（文字）部分 */
+.description {
+  font-size: 1.5em;
+  opacity: 0;
+  transition: all 1s;
+}
+
+/* 内容（文字）部分のフェードイン */
+.fade {
+  opacity: 1;
 }
 
 .descriptionTable {
@@ -63,6 +75,8 @@ body {
 .note {
   font-size: 0.7em;
 }
+
+
 /* ----------
   中段Section
 ---------- */
