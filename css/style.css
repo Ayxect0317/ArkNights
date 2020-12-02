@@ -76,7 +76,7 @@ form .btn:active {
   justify-content: center;
 }
 
-.flexBox li {
+li {
   list-style: none;
   margin: auto 0; /* 上下中央揃え */
   text-decoration: none;

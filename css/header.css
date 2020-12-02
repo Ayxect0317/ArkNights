@@ -1,28 +1,62 @@
 header {
+  margin: 0;
+}
+
+/* -----
+  ハンバーガーメニュー
+----- */
+.hamburger {
+  background-color: #333333;
+  height: 100%;
+  left: -320px;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: all .6s;
+  width: 300px;
+  z-index: 200;
+}
+
+.hamburger li {
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 1.75em;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+/* ハンバーガーメニューが開いた時の挙動 */
+.open {
+  left: 0;
+}
+
+
+/* -----
+  上段メニュー
+----- */
+#navigation {
   background-color: navy;
   color: white;
-  margin: 0;
+  display: -webkit-flex;
+  display: flex;
   width: 100%;
 }
 
-#navigation {
-  display: -webkit-flex;
-  display: flex;
-}
-
-#navigation li{
-  background-color: navy;
+#navigation div {
   border-right: 2px solid white;
-  color: white;
+  padding: 10px 20px;
+}
+
+.hamburgerMenu, .titleName{
   font-size: 1.5em;
-  text-decoration: none;
-  padding: 10px .5em;
 }
 
-#navigation li:hover {
-  background-color: royalblue;
+.hamburgerMenu {
+  cursor: pointer;
 }
 
+
+/* 時刻表示 */
 #nowTime {
   font-size: 1.2em;
   margin: auto 20px auto auto; /* margin-right を auto に設定することで右端に寄せる */
