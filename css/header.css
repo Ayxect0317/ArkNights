@@ -20,13 +20,13 @@ header {
 .hamburger li {
   border-bottom: 2px solid white;
   color: white;
-  font-size: 1.75em;
-  margin: 15px 0;
+  font-size: 1.5em;
+  padding-top: 15px;
   text-decoration: none;
 }
 
 /* ハンバーガーメニューが開いた時の挙動 */
-.open {
+.opened__hamburger {
   left: 0;
 }
 
@@ -60,4 +60,25 @@ header {
 #nowTime {
   font-size: 1.2em;
   margin: auto 20px auto auto; /* margin-right を auto に設定することで右端に寄せる */
+}
+
+
+/* ハンバーガーメニューが開いた時の黒い背景 */
+.blackBg {
+  background-color: black;
+  cursor: pointer;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: all .6s;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 100;
+}
+
+.opened__hlackBg {
+  opacity: .8;
+  visibility: visible;
 }

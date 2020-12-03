@@ -1,0 +1,38 @@
+.tabs{
+  margin: 10px auto;
+}
+
+.tab-buttons span{
+  background: royalblue;
+  border: 1px solid white;
+  cursor: pointer;
+  display: block;
+  flex: 1;
+  font-size: 1.2em;
+  height: 40px;
+  line-height: 40px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+.materialTable {
+  display: none; /* 選択されていないテーブルは表示しない */
+  margin: 0 auto;
+}
+
+.materialTable td {
+  cursor: pointer;
+  font-size: .9em;
+  padding: 10px 0;
+  width: 240px;
+}
+
+.materialTable img {
+  padding-right: .25em;
+  vertical-align: middle; /* 画像と文字を上下中央で揃える */
+}
+
+.active {
+  display: block; /* 畝円託されたテーブルのみ表示 */
+}

@@ -2,10 +2,6 @@ body {
   color: white;
 }
 
-/* ----------
-  上段Section
----------- */
-
 #materialName, #changeDesciription li, #wrapDescription {
   background-color: hsl(0, 0%, 20%);
   border: 1px solid white;
@@ -151,48 +147,4 @@ body {
   top: 0;
   width: 100%;
   z-index: 1;
-}
-
-/* ----------
-  下段Section
----------- */
-
-.materialTable {
-  margin: 0 auto;
-}
-
-.materialTable td {
-  cursor: pointer;
-  font-size: .9em;
-  padding: 10px 0;
-  width: 240px;
-}
-
-.materialTable img {
-  padding-right: .25em;
-  vertical-align: middle; /* 画像と文字を上下中央で揃える */
-}
-
-
-.tabs{
-  margin: 10px auto;
-}
-.tab-buttons span{
-  background: royalblue;
-  border: 1px solid white;
-  cursor: pointer;
-  display: block;
-  flex: 1;
-  height: 40px;
-  line-height: 40px;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.materialTable {
-  display: none;
-}
-
-.active {
-  display: block;
 }
