@@ -36,7 +36,17 @@ body {
 }
 
 #changeDesciription li:hover {
-  background-color: royalblue;
+  background-color: orange;
+  /* 文字の縁取り */
+  text-shadow:
+    2px 2px .5px black,
+    2px -2px .5px black,
+    -2px -2px .5px black,
+    -2px 2px .5px black,
+    2px 0px .5px black,
+    0px 2px .5px black,
+    -2px 0px .5px black,
+    0px -2px .5px black;
 }
 
 /* 背景部分 */
@@ -109,7 +119,7 @@ body {
 }
 
 .popup-inner {
-  background-color: #333333;
+  background-color: darkslategrey;
   border: 1px solid white;
   border-radius: 30px;
   color: white;

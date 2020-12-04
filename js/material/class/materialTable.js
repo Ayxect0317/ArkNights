@@ -23,7 +23,7 @@ export default class materialTable {
       }
 
       // 素材ごとに画像・名前をtdタグへ表示
-      let material = data.materials[i];
+      const material = data.materials[i];
       htmlConstruction = htmlConstruction +
         `<td class="${material.id}">${convertMaterialIdToImgTag(material.id, 50)}${material.name}</td>`;
     }

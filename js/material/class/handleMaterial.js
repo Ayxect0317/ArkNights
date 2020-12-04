@@ -41,7 +41,7 @@ export default class handleMaterial {
     const response = await fetch(this.jsonPath);
     const data = await response.json();
     const materialList = data.materials.filter(k => k.id === this._id)[0];
-    let stages = materialList.stageToGet;
+    const stages = materialList.stageToGet;
 
     let message = "<p><収集場所></p>";
 
@@ -79,7 +79,7 @@ export default class handleMaterial {
     }
 
     /* 出力・フェードイン処理 */
-    let target = document.getElementsByClassName("description")[0];
+    const target = document.getElementsByClassName("description")[0];
     this.fadeIn(target, message);
   }
 
@@ -138,7 +138,7 @@ export default class handleMaterial {
     }
 
     /* 出力・フェードイン処理 */
-    let target = document.getElementsByClassName("description")[0];
+    const target = document.getElementsByClassName("description")[0];
     this.fadeIn(target, message);
   }
 
@@ -152,15 +152,15 @@ export default class handleMaterial {
 
     // HTMLの書き換え
     // インターバルを設けることで、アニメーションを自然にする
-    let setTimeOutAndRewrite = new Promise(resolve => {
+    const setTimeOutAndRewrite = new Promise(resolve => {
       setTimeout(() => {
         target.innerHTML = message;
         resolve();
       }, 800);
     });
 
-    let promise = await removeFadeInClass;
-    promise = await setTimeOutAndRewrite;
+    await removeFadeInClass;
+    await setTimeOutAndRewrite;
     // フェードインクラスの追加
     target.classList.add("fade");
   }

@@ -3,7 +3,7 @@
 import recalcNowTime from "../js/util/showNowTime.js";
 
 // header.htmlを読み込み、headerタグに出力
-async function createHeader() {
+const createHeader = async() => {
   const response = await fetch("../html/header.html");
   const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
   // docはHTMLObjectなので、文字列に変換
@@ -16,13 +16,13 @@ async function createHeader() {
   return new Promise(resolve => { resolve(); })
 }
 
-function toggleNav() {
-  const hamburgerMenu = document.querySelectorAll(".hamburgerMenu");
+const toggleNav = () => {
+  const hamburgerIcon = document.querySelectorAll(".hamburgerIcon");
   const hamburger = document.getElementsByClassName("hamburger")[0];
   const blackBg = document.getElementsByClassName("blackBg")[0];
 
   // ハンバーガーメニューをクリックしたとき、ナビゲーションがトグルする
-  hamburgerMenu.forEach(target => {
+  hamburgerIcon.forEach(target => {
     target.addEventListener("click", () => {
       hamburger.classList.toggle("opened__hamburger");
       blackBg.classList.toggle("opened__hlackBg");
@@ -36,8 +36,8 @@ function toggleNav() {
   });
 }
 
-async function exec() {
-  let promise = await createHeader();
+const exec = async() => {
+  const promise = await createHeader();
   toggleNav();
 }
 

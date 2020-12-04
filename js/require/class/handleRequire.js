@@ -53,7 +53,7 @@ export default class handleRequire {
 
       /* selectタグの挿入 */
       // 素材IDの配列を取得
-      let keys = Object.keys(lowMaterialList)
+      const keys = Object.keys(lowMaterialList)
 
       // メイン処理
       for (let i = 0; i < keys.length; i++) {

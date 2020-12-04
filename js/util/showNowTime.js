@@ -3,7 +3,7 @@
 import zeroPadding from "./zeroPadding.js";
 
 // 現在の時刻を文字列として返す
-function calcNowDate() {
+const calcNowDate = () => {
   const nowDate = new Date();
   const month = zeroPadding(nowDate.getMonth() + 1); // 0-11が返り値であるため、1を足す
   const day = zeroPadding(nowDate.getDate());
@@ -12,7 +12,6 @@ function calcNowDate() {
   const second = zeroPadding(nowDate.getSeconds());
 
   return `${month}/${day} ${hour}:${minute}:${second}`;
-
 }
 
 // メッセージ内容を calcTimeToBeHeld.js から取得する
@@ -23,7 +22,7 @@ export default function recalcNowTime() {
   refresh();
 }
 
-function refresh() {
+const refresh = () => {
   // 1000ミリ秒（1秒）後にrecalcNowTimeを1度だけ実行する
   setTimeout(recalcNowTime, 1000);
 }

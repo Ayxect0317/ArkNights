@@ -3,7 +3,7 @@
 }
 
 .tab-buttons span{
-  background: royalblue;
+  background-color: royalblue;
   border: 1px solid white;
   cursor: pointer;
   display: block;
@@ -13,6 +13,21 @@
   line-height: 40px;
   padding: 10px 0;
   text-align: center;
+  /* 文字の縁取り */
+  text-shadow:
+    2px 2px 1px navy,
+    2px -2px 1px navy,
+    -2px -2px 1px navy,
+    -2px 2px 1px navy,
+    2px 0px 1px navy,
+    0px 2px 1px navy,
+    -2px 0px 1px navy,
+    0px -2px 1px navy;
+}
+
+.tab-buttons span:hover {
+  background-color: orange;
+  columns: darkslategrey;
 }
 
 
@@ -25,7 +40,21 @@
   cursor: pointer;
   font-size: .9em;
   padding: 10px 0;
+  /* 文字の縁取り */
+  text-shadow:
+    2px 2px .5px black,
+    2px -2px .5px black,
+    -2px -2px .5px black,
+    -2px 2px .5px black,
+    2px 0px .5px black,
+    0px 2px .5px black,
+    -2px 0px .5px black,
+    0px -2px .5px black;
   width: 240px;
+}
+
+.materialTable td:hover {
+  background-color: orange;
 }
 
 .materialTable img {

@@ -6,10 +6,9 @@ header {
   ハンバーガーメニュー
 ----- */
 .hamburger {
-  background-color: #333333;
+  background-color: darkslategrey;
   height: 100%;
   left: -320px;
-  padding: 10px;
   position: fixed;
   top: 0;
   transition: all .6s;
@@ -21,8 +20,16 @@ header {
   border-bottom: 2px solid white;
   color: white;
   font-size: 1.5em;
-  padding-top: 15px;
-  text-decoration: none;
+  padding: 15px 10px 0 10px;
+}
+
+.hamburger li:hover {
+  background-color: orange;
+  color: darkslategrey;
+}
+
+.hamburger i {
+  padding-right: .3em;
 }
 
 /* ハンバーガーメニューが開いた時の挙動 */
@@ -32,10 +39,10 @@ header {
 
 
 /* -----
-  上段メニュー
+  グローバルナビゲーション
 ----- */
 #navigation {
-  background-color: navy;
+  background-color: royalblue;
   color: white;
   display: -webkit-flex;
   display: flex;
@@ -47,19 +54,31 @@ header {
   padding: 10px 20px;
 }
 
-.hamburgerMenu, .titleName{
+/* 文字の縁取り */
+.titleName, #nowTime {
+  text-shadow:
+    2px 2px 1px navy,
+    2px -2px 1px navy,
+    -2px -2px 1px navy,
+    -2px 2px 1px navy,
+    2px 0px 1px navy,
+    0px 2px 1px navy,
+    -2px 0px 1px navy,
+    0px -2px 1px navy;
+}
+
+.hamburgerIcon, .titleName {
   font-size: 1.5em;
 }
 
-.hamburgerMenu {
+.hamburgerIcon {
   cursor: pointer;
 }
-
 
 /* 時刻表示 */
 #nowTime {
   font-size: 1.2em;
-  margin: auto 20px auto auto; /* margin-right を auto に設定することで右端に寄せる */
+  margin: auto 0 auto auto; /* margin-left を auto に設定することで右端に寄せる */
 }
 
 

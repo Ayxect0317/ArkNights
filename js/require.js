@@ -7,10 +7,7 @@ import convertMaterialIdToName from "./material/func/convertMaterialIdToName.js"
 /* -----
     section左上部のDOM操作
 ----- */
-const button = document.getElementById("exec");
-button.addEventListener("click", calcRequireMaterials);
-
-function calcRequireMaterials() {
+const calcRequireMaterials = () => {
   /* 素材ID */
   // selectタグの何番目が選択されているかを取得
   const preMaterial = document.selectMaterialForm.material
@@ -59,3 +56,6 @@ function calcRequireMaterials() {
   }
   -----*/
 }
+
+const button = document.getElementById("exec");
+button.addEventListener("click", calcRequireMaterials);

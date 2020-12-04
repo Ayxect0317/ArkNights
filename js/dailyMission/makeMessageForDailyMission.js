@@ -8,7 +8,7 @@ import zeroPadding from "../util/zeroPadding.js";
 ---- */
 
 // 現在開催中か判定する
-function isHeld(days) {
+const isHeld = days => {
   const time = new Date()
   const day = time.getDay();
   const hour = time.getHours();
@@ -20,13 +20,13 @@ function isHeld(days) {
 // 次回開催日が何日後か計算する
 // 配列の要素ごとに (開催曜日 - 現在曜日 + 7) & 7 を計算し、最小値を取ることで計算できる
 // e.g. 開催日が[0, 1, 4, 6], 現在曜日が 2 の場合、[5, 6, 2, 3]となるので、直近は2日後
-function calcUntilNextEventDay(days, nowDay) {
+const calcUntilNextEventDay = (days, nowDay) => {
   const array = days.map(x => (x - nowDay + 7) % 7);
   return Math.min.apply({}, array);
 }
 
 // 次回開催日を計算する
-function calcNextEventDate(days) {
+const calcNextEventDate = days => {
   // 開催日までの日数を計算する
   const now = new Date();
   const untilNextEventDay = calcUntilNextEventDay(days, now.getDay());
@@ -47,12 +47,11 @@ function calcNextEventDate(days) {
   const hour = Math.floor(rest / 1000 / 60 / 60) % 24;
   const day = Math.floor(rest / 1000 / 60 / 60 / 24);
 
-  let count = {
+  return {
     sec: zeroPadding(sec),
     min: zeroPadding(min),
     hour: zeroPadding(hour)
   }
-  return count;
 }
 
 // script.js にメッセージを返却する

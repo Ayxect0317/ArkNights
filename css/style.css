@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  color: #333333;
+  color: darkslategrey;
   font-family: 'Montserrat', 'Kosugi', sans-serif;
   font-size: 24px;
 }
@@ -31,19 +31,23 @@ h1, h2, p {
   margin: 10px 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 table {
   border-collapse: collapse;
 }
 
 table th, table td {
   border: solid 2px lightsteelblue;
-  background-color: #333333;
+  background-color: darkslategrey;
   text-align: center;
 }
 
 /* Formの共通設定 */
 form select, form .btn{
-  background-color: #333333;
+  background-color: darkslategrey;
   color: white;
   font-family: 'Montserrat', 'Kosugi', sans-serif;
   font-size: 24px;
@@ -79,5 +83,4 @@ form .btn:active {
 li {
   list-style: none;
   margin: auto 0; /* 上下中央揃え */
-  text-decoration: none;
 }

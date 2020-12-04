@@ -7,17 +7,12 @@ import isMaterialId from "./material/func/isMaterialId.js";
 /* -----
     section上段のDOM操作
 ----- */
-// URLのパラメータから素材IDを取得
-let matId = "m_manganese"; //デフォルト値
-if (window.location.search) {
-  // 7文字目以降を取得 (?matid=の部分は必要ないため)
-  const preId = window.location.search.substring(7,window.location.search.length);
-
-  // URLのパラメータが素材IDの一覧に存在するならば、素材IDをデフォルト値から変更
-  if (isMaterialId(preId)) {
-    matId = preId;
-  }
-}
+/* URLのリクエストから素材IDを取得 */
+const defaultMatId = "m_manganese";
+// 7文字目以降を取得 (?matid=の部分は必要ないため)
+const request = window.location.search.substring(7,window.location.search.length) ?? defaultMatId;
+// URLのパラメータが素材IDの一覧に存在するならば、素材IDをデフォルト値から変更
+const matId = isMaterialId(request) ? request : defaultMatId;
 
 // html読み込み時、収集場所をデフォルトとして表示
 let handleM = new handleMaterial(matId);
@@ -40,7 +35,7 @@ document.getElementById("lowMaterial").onclick = () => { handleM.showLowMaterial
 
 /* "理性効率とは？" をクリックしたとき、モルダーを表示する */
 // 参考: https://tech-dig.jp/js-modal/
-function popupImage() {
+const popupImage = () => {
   const popup = document.getElementById('js-popup');
   if(!popup) return;
 
@@ -48,15 +43,15 @@ function popupImage() {
   const closeBtn = document.getElementById('js-close-btn');
   const showBtn = document.getElementById('js-show-popup');
 
-  closePopUp(blackBg);
-  closePopUp(closeBtn);
-  closePopUp(showBtn);
-  function closePopUp(elem) {
+  const closePopUp = elem => {
     if(!elem) return;
-    elem.addEventListener('click', function() {
+    elem.addEventListener('click', () => {
       popup.classList.toggle('is-show');
     });
   }
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
 }
 popupImage();
 
@@ -104,7 +99,7 @@ const all_materials = [b_materials, l_materials, m_materials, h_materials, e_mat
 
 
 /*メインプログラム */
-function changeMaterial(handleM, val) {
+const changeMaterial = (handleM, val) => {
     handleM.id = val;
     handleM.showMaterialNameAndImg(); // 素材名の書き換え
     handleM.showStagesToGet(); // デフォルトの表示内容を "収集場所" に
