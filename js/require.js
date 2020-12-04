@@ -7,7 +7,7 @@ import convertMaterialIdToName from "./material/func/convertMaterialIdToName.js"
 /* -----
     section左上部のDOM操作
 ----- */
-const calcRequireMaterials = () => {
+const calcRequireMaterials =  async () => {
   /* 素材ID */
   // selectタグの何番目が選択されているかを取得
   const preMaterial = document.selectMaterialForm.material
@@ -21,41 +21,39 @@ const calcRequireMaterials = () => {
 
   /* メイン処理 */
   const handleR = new handleRequire(matId, quantity);
-  handleR.createResultHtml();
+  await handleR.createResult();
 
   /* -----
       section左下部のDOM操作
   ----- */
-  handleR.createInput2Html();
+  await handleR.createInput2Html();
 
 
   /* -----
     所持数更新後の処理（開発中）
     innerHTMLで生成したFormに対してDOM操作ができない
-  // EventListenerの設定
-  console.log(document.getElementById("input2Form"));
-  let input2Form = document.getElementById("input2Form");
-  let select0 = input2Form.mat0Num;
-  let select1 = input2Form.mat1Num;
-  let select2 = input2Form.mat2Num;
-  console.log(select0);
-  console.log(select1);
-  console.log(select2);
+  -----*/
+  /* メインプログラム */
+  const changePossessions = () => {
+    const input2Form = document.possessionsForm;
+    const select0 = input2Form.mat0Num.selectedIndex;
+    const select1 = input2Form.mat1Num ? input2Form.mat1Num.selectedIndex : 0;
+    const select2 = input2Form.mat2Num ? input2Form.mat2Num.selectedIndex : 0;
+    handleR.changePossessions(select0, select1, select2);
+  }
+
+  /* EventListenerの設定 */
   // 上級源岩は合成に必要な素材が1種類なので、
   // select1, select2がundefinedになる可能性があることに注意
+  const input2Form = document.possessionsForm;
+  const select0 = input2Form.mat0Num;
+  const select1 = input2Form.mat1Num;
+  const select2 = input2Form.mat2Num;
   select0.addEventListener("change", changePossessions);
-  if (select1) {select1.addEventListener("change", changePossessions);}
-  if (select2) {select2.addEventListener("change", changePossessions);}
-
-  // 関数定義
-  function changePossessions() {
-    select0 = document.possessionsForm.mat0Num;
-    select1 = document.possessionsForm.mat1Num;
-    select2 = document.possessionsForm.mat2Num;
-    console.log(`${select0}, ${select1}, ${select2}`)
-  }
-  -----*/
+  if (select1) { select1.addEventListener("change", changePossessions) };
+  if (select2) { select2.addEventListener("change", changePossessions) };
 }
 
+/* Execボタン */
 const button = document.getElementById("exec");
 button.addEventListener("click", calcRequireMaterials);

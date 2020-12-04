@@ -142,10 +142,13 @@ export default class handleMaterial {
     this.fadeIn(target, message);
   }
 
-  /* フェードイン処理のメインプログラム */
+
+  /* -----
+      フェードイン処理のメインプログラム
+  ----- */
   async fadeIn(target, message) {
     // フェードインクラスの削除
-    let removeFadeInClass = new Promise(resolve => {
+    const removeFadeInAttr = new Promise(resolve => {
       target.classList.remove("fade");
       resolve();
     });
@@ -159,7 +162,7 @@ export default class handleMaterial {
       }, 800);
     });
 
-    await removeFadeInClass;
+    await removeFadeInAttr;
     await setTimeOutAndRewrite;
     // フェードインクラスの追加
     target.classList.add("fade");

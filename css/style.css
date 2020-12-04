@@ -46,17 +46,37 @@ table th, table td {
 }
 
 /* Formの共通設定 */
-form select, form .btn{
-  background-color: darkslategrey;
-  color: white;
+form select, form .btn {
   font-family: 'Montserrat', 'Kosugi', sans-serif;
-  font-size: 24px;
 }
 
 form select {
+  background-color: #333333;
+  border: 2px solid white;
+  color: white;
+  font-size: 1em;
   margin: .25em 0 .25em .5em;
   padding: 2px;
 }
+
+form .btn {
+  background-color: orange;
+  border: 1px solid black;
+  color: white;
+  font-size: 1.2em;
+  margin: 10px 0;
+  padding: 2px;
+  text-shadow:
+    2px 2px .5px black,
+    2px -2px .5px black,
+    -2px -2px .5px black,
+    -2px 2px .5px black,
+    2px 0px .5px black,
+    0px 2px .5px black,
+    -2px 0px .5px black,
+    0px -2px .5px black;
+}
+
 
 form .btn {
   border-bottom: solid 4px #627295;
