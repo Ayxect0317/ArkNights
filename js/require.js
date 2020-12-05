@@ -4,9 +4,9 @@ import handleRequire from "./require/class/handleRequire.js";
 import convertMaterialIdToImgTag from "./material/func/convertMaterialIdToImgTag.js"
 import convertMaterialIdToName from "./material/func/convertMaterialIdToName.js"
 
-/* -----
+/**
     section左上部のDOM操作
------ */
+ */
 const calcRequireMaterials =  async () => {
   /* 素材ID */
   // selectタグの何番目が選択されているかを取得
@@ -23,13 +23,13 @@ const calcRequireMaterials =  async () => {
   const handleR = new handleRequire(matId, quantity);
   await handleR.createResult();
 
-  /* -----
+  /**
       section左下部のDOM操作
-  ----- */
+   */
   await handleR.createInput2Html();
 
 
-  /* -----
+  /**
     所持数更新後の処理（開発中）
     innerHTMLで生成したFormに対してDOM操作ができない
   -----*/

@@ -1,9 +1,10 @@
 "use strict";
 
-// 素材IDを名前に変換する
-export default function convertMaterialIdToName(id) {
-  // 対応リスト
-  const nameList = {
+/**
+ * 素材IDを素材名に変換する
+ */
+export default function convertMaterialIdToName(materialId) {
+  const nameObject = {
     "b_rock": "源岩鉱",
     "b_souchi": "破損装置",
     "b_ester": "エステル原料",
@@ -46,5 +47,5 @@ export default function convertMaterialIdToName(id) {
   }
 
   // 出力
-  return nameList[id];
+  return nameObject[materialId];
 }

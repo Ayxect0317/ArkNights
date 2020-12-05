@@ -4,9 +4,9 @@ import handleMaterial from "./material/class/handleMaterial.js";
 import materialTable from "./material/class/materialTable.js";
 import isMaterialId from "./material/func/isMaterialId.js";
 
-/* -----
+/**
     section上段のDOM操作
------ */
+ */
 /* URLのリクエストから素材IDを取得 */
 const defaultMatId = "m_manganese";
 // 7文字目以降を取得 (?matid=の部分は必要ないため)
@@ -29,9 +29,9 @@ document.getElementById("superiorMaterial").onclick = () => { handleM.showSuperi
 document.getElementById("lowMaterial").onclick = () => { handleM.showLowMaterial() }
 
 
-/* -----
+/**
     section中段のDOM操作
------ */
+ */
 
 /* "理性効率とは？" をクリックしたとき、モルダーを表示する */
 // 参考: https://tech-dig.jp/js-modal/
@@ -55,9 +55,9 @@ const popupImage = () => {
 }
 popupImage();
 
-/* -----
+/**
     section下段のDOM操作
------ */
+ */
 
 // 素材一覧表を作成する
 /*

@@ -25,23 +25,23 @@ export default class handleMaterial {
     // JSONから素材のIDのみを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialList = data.materials.filter(k => k.id === this._id)[0];
+    const materialObject = data.materials.filter(k => k.id === this._id)[0];
 
     // 出力
     document.getElementById("materialName").innerHTML =
-      `${convertMaterialIdToLink(materialList.id)}${convertMaterialIdToName(materialList.id)}`;
+      `${convertMaterialIdToLink(materialObject.id)}${convertMaterialIdToName(materialObject.id)}`;
   }
 
 
-  /* -----
+  /**
     収集場所を出力する
-  ----- */
+   */
   async showStagesToGet() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialList = data.materials.filter(k => k.id === this._id)[0];
-    const stages = materialList.stageToGet;
+    const materialObject = data.materials.filter(k => k.id === this._id)[0];
+    const stages = materialObject.stageToGet;
 
     let message = "<p><収集場所></p>";
 
@@ -84,15 +84,15 @@ export default class handleMaterial {
   }
 
 
-  /* -----
+  /**
     上位素材を表示する
-  ----- */
+   */
   async showSuperiorMaterial() {
     /* JSONから必要なデータを抽出 */
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialList = data.materials.filter(k => k.id === this._id)[0];
-    const superiorMaterials = materialList.superiorMaterial;
+    const materialObject = data.materials.filter(k => k.id === this._id)[0];
+    const superiorMaterials = materialObject.superiorMaterial;
 
     /* HTMLの作成 */
     let message = "<p><上位素材>";
@@ -118,15 +118,15 @@ export default class handleMaterial {
   }
 
 
-  /* -----
+  /**
     下位素材を表示する
-  ----- */
+   */
   async showLowMaterial() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialList = data.materials.filter(k => k.id === this._id)[0];
-    const lowMaterialRecipie = materialList.lowMaterialRecipie;
+    const materialObject = data.materials.filter(k => k.id === this._id)[0];
+    const lowMaterialRecipie = materialObject.lowMaterialRecipie;
 
     // 必要素材を [画像]x[個数]の形式で表示
     let message = "<p><下位素材>";
@@ -143,9 +143,9 @@ export default class handleMaterial {
   }
 
 
-  /* -----
+  /**
       フェードイン処理のメインプログラム
-  ----- */
+   */
   async fadeIn(target, message) {
     // フェードインクラスの削除
     const removeFadeInAttr = new Promise(resolve => {
@@ -169,24 +169,24 @@ export default class handleMaterial {
   }
 
 
-  /* -----
-    下位素材の素材名と個数をリストで返却する
-  ----- */
-  async createLowMaterialList() {
+  /**
+    下位素材の素材名と個数をオブジェクトで返却する
+   */
+  async createLowmaterialObject() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialList = data.materials.filter(k => k.id === this._id)[0];
-    const lowMaterialRecipie = materialList.lowMaterialRecipie;
+    const materialObject = data.materials.filter(k => k.id === this._id)[0];
+    const lowMaterialRecipie = materialObject.lowMaterialRecipie;
 
     // 連想配列の作成
-    let lowMaterialList = {};
+    let lowmaterialObject = {};
     for (let k of lowMaterialRecipie) {
-      lowMaterialList[k.id] = k.quantity;
+      lowmaterialObject[k.id] = k.quantity;
     }
 
     return new Promise(resolve => {
-      resolve(lowMaterialList);
+      resolve(lowmaterialObject);
     });
   }
 }

@@ -1,8 +1,9 @@
 "use strict";
 
-// 文字列が素材IDかどうか判定する
+/**
+ * 文字列が素材IDかどうか判定する
+ */
 export default function isMatId(str) {
-  // 素材ID一覧
   const materialIds = [
     "b_rock",
     "b_souchi",
@@ -43,8 +44,6 @@ export default function isMatId(str) {
     "e_d32",
     "e_nano",
     "e_fusion"
-  ]
-
-  // 出力
+  ];
   return materialIds.includes(str);
 }

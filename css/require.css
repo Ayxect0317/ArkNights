@@ -1,6 +1,6 @@
-/* -----
-    section共通
------ */
+/**
+ * section共通
+ */
 #input1, #input2, #output{
   background-color: darkslategrey;
   border: 1px solid white;
@@ -8,9 +8,9 @@
   padding: 10px 10px 10px 1em;
 }
 
-/* -----
-    section左部
------ */
+/**
+ * section左部
+ */
 #input {
   flex-basis: 500px;
   margin: 0 20px;
@@ -20,20 +20,20 @@
   margin-bottom: 30px;
 }
 
-/* -----
-    section左上部
------ */
+/**
+ * section左上部
+ */
 
-/* -----
-    section左下部
------ */
+/**
+ * section左下部
+ */
 .hidden {
   visibility: hidden;
 }
 
-/* -----
-    section右部
------ */
+/**
+ * section右部
+ */
 #output {
   flex-basis: 750px;
   margin-left: 20px;

@@ -2,9 +2,9 @@ header {
   margin: 0;
 }
 
-/* -----
-  ハンバーガーメニュー
------ */
+/**
+ * ハンバーガーメニュー
+ */
 .hamburger {
   background-color: darkslategrey;
   height: 100%;
@@ -38,9 +38,9 @@ header {
 }
 
 
-/* -----
-  グローバルナビゲーション
------ */
+/**
+ * グローバルナビゲーション
+ */
 #navigation {
   background-color: royalblue;
   color: white;

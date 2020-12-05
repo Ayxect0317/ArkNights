@@ -83,9 +83,9 @@ body {
 }
 
 
-/* ----------
-  中段Section
----------- */
+/**
+ * 中段Section
+ */
 #qParent {
   text-align: right; /* 右揃えするinline要素の親要素に指定する */
 }
