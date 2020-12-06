@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * 文字列が素材IDかどうか判定する
+ * 与えられた文字列が、素材IDであるか判定する
  */
 export default function isMatId(str) {
   const materialIds = [

@@ -2,10 +2,7 @@
 
 import handleMaterial from "../../material/class/handleMaterial.js";
 import convertMaterialIdToLink from "../../material/func/convertMaterialIdToLink.js";
-import convertMaterialIdToJsonPath from "../../material/func/convertMaterialIdToJsonPath.js";
-import convertMaterialIdToName from "../../material/func/convertMaterialIdToName.js";
-import convertRecipieToTag from "../../material/func/convertRecipieToTag.js";
-import option0to40 from "../func/option0to40.js";
+import createPossessionsForm from "../func/createPossessionsForm.js";
 import createResultHtml from "../func/createResultHtml.js";
 
 export default class handleRequire {
@@ -18,28 +15,27 @@ export default class handleRequire {
   }
 
   /**
-   * resultをHTMLへ出力する
-   * => section左上部のDOM操作
+   * resultをHTML (#result) へ出力する
    */
-  async createResult() {
+  async showResult() {
     /* 下位素材のオブジェクトを取得 */
     const handleM = new handleMaterial(this._materialId);
     const lowmaterialObject = await handleM.createLowmaterialObject();
 
     /* HTML作成と素材要求数をメンバ変数に記録 */
-    const requireArr = []; // それぞれの素材要求数を一時的に格納する配列
+    const requireTempArray = []; // それぞれの素材要求数を一時的に格納する配列
     const requireObject = {}; // HTMLを作成するために、素材名と必要数をセットで管理するオブジェクト
 
     for (let matId in lowmaterialObject) {
       let require = lowmaterialObject[matId] * this._quantity;
-      requireArr.push(require);
+      requireTempArray.push(require);
       requireObject[matId] = require;
     }
 
     // それぞれの素材の要求数をメンバ変数に代入
-    [this._requireMatNum0, this._requireMatNum1, this._requireMatNum2] = requireArr;
+    [this._requireMatNum0, this._requireMatNum1, this._requireMatNum2] = requireTempArray;
 
-    // 出力
+    /* 出力 */
     document.getElementById("result").innerHTML =
       createResultHtml(this._materialId, this._quantity, requireObject);
     return new Promise(resolve => { resolve() });
@@ -47,46 +43,29 @@ export default class handleRequire {
 
 
   /**
-   * Execボタンが押された時、必要素材に合わせたフォームを表示
-   * => section左下部のDOM操作
+   * Execボタンが押された時、ユーザーに現在の下位素材の所持数を
+   * 入力させるフォーム (possessionsForm) を表示
+   *
+   * 要求する素材 (materialId) が変化するとき、
+   *  select name => 変化しない
+   *  ユーザーから見える素材名（select田宮の前の文字列）=> 変化する（要求する素材ん居合わせる）
+   *
+   * ページ読み込み時、フォームが挿入される個所 (#input2) は
+   * cssで隠してあるので、hiddenクラスを取り払うこと
    */
-  async createInput2Html() {
+  async showPossessionsForm() {
     /* 下位素材のオブジェクトを取得 */
     const handleM = new handleMaterial(this._materialId);
     const lowmaterialObject = await handleM.createLowmaterialObject();
 
-    handleM.createLowmaterialObject().then(lowmaterialObject => {
-      let contentOfForm = `
-        <p>所持数を選択してください。</p>
-        <form name="possessionsForm" action="">
-      `;
-
-      /* selectタグの挿入 */
-      // 下位素材のオブジェクトを取得
-      const keys = Object.keys(lowmaterialObject)
-
-      // メイン処理
-      for (let i=0; i<keys.length; i++) {
-        const matId = Object.keys(lowmaterialObject)[i]; // 素材IDの取得
-        const matName = convertMaterialIdToName(matId); // 素材名に変換
-
-        contentOfForm = contentOfForm + convertMaterialIdToName(matId)
-          + `<select name="mat${i}Num">`
-          + option0to40()
-          + "</select><br>";
-      }
-      contentOfForm = contentOfForm + "</form>";
-
-      // 出力
-      document.getElementById("input2").innerHTML = contentOfForm;
-    })
-
-    /* フォームを表示 */
+    /* 出力と表示 */
+    document.getElementById("input2").innerHTML = createPossessionsForm(lowmaterialObject);
     document.getElementById("input2").classList.remove("hidden");
 
     // タイムアウトを設けることで、挿入したフォームをDOM操作できるようにする
-    return new Promise(resolve => {setTimeout(resolve, 500) });
+    return new Promise(resolve => { setTimeout(resolve, 500) });
   }
+
 
   /**
    * 素材所持数が変更された時の処理
@@ -94,13 +73,13 @@ export default class handleRequire {
    */
   async changePossessions(select0, select1, select2) {
     /**
-     * ユーザーが選択した値をもとに、それぞれの素材が何個必要なのかを求める
+     * ユーザーが選択した値（素材の所持数）をもとに、それぞれの素材があと何個必要なのかを求め、表示する
      * 必要数は0未満にならないことに注意
      */
     const nowRequireNum0 = this._requireMatNum0 - select0 > 0 ? this._requireMatNum0 - select0 : 0;
     const nowRequireNum1 = this._requireMatNum1 - select1 > 0 ? this._requireMatNum1 - select1 : 0;
     const nowRequireNum2 = this._requireMatNum2 - select2 > 0 ? this._requireMatNum2 - select2 : 0;
-    const nowRequireArr = [nowRequireNum0, nowRequireNum1, nowRequireNum2];
+    const nowrequireTempArray = [nowRequireNum0, nowRequireNum1, nowRequireNum2];
 
     /* 下位素材のオブジェクトを取得 */
     const handleM = new handleMaterial(this._materialId);
@@ -109,8 +88,8 @@ export default class handleRequire {
 
     /* HTML作成に必要なデータの生成 */
     const keys = Object.keys(lowmaterialObject)
-    for (let i=0; i<keys.length; i++) {
-      nowrequireObject[keys[i]] = nowRequireArr[i];
+    for (let i = 0; i < keys.length; i++) {
+      nowrequireObject[keys[i]] = nowrequireTempArray[i];
     }
 
     /* 出力 */

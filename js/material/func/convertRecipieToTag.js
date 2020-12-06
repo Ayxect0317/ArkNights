@@ -3,7 +3,7 @@
 import convertMaterialIdToLink from "./convertMaterialIdToLink.js";
 
 /**
- * 合成レシピ内の下位素材それぞれに対して、HTMLタグに変換する
+ * 合成に必要な素材を、それぞれHTMLタグに変換する
  * 変換形式は "[画像]x[個数]"
  */
 export default function convertRecipieToTag(recipieObject) {

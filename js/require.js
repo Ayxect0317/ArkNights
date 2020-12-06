@@ -21,12 +21,12 @@ const calcRequireMaterials =  async () => {
 
   /* メイン処理 */
   const handleR = new handleRequire(matId, quantity);
-  await handleR.createResult();
+  await handleR.showResult();
 
   /**
       section左下部のDOM操作
    */
-  await handleR.createInput2Html();
+  await handleR.showPossessionsForm();
 
 
   /**

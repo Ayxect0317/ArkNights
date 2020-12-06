@@ -4,28 +4,31 @@ import convertMaterialIdToLink from "../func/convertMaterialIdToLink.js";
 import convertMaterialIdToJsonPath from "../func/convertMaterialIdToJsonPath.js";
 import convertMaterialIdToName from "../func/convertMaterialIdToName.js";
 import convertRecipieToTag from "../func/convertRecipieToTag.js";
+import createStageToGet from "../func/createStageToGet.js";
+import createSuperiorMaterial from "../func/createSuperiorMaterial.js";
+import createLowMaterial from "../func/createLowMaterial.js";
 
 export default class handleMaterial {
-  constructor(id) {
-    this._id = id;
-    this.jsonPath = convertMaterialIdToJsonPath(id);
+  constructor(materialId) {
+    this._materialId = materialId;
+    this.jsonPath = convertMaterialIdToJsonPath(materialId);
   }
 
-  get id() { return this._id };
+  get id() { return this._materialId };
   set id(val) {
-    this._id = val
+    this._materialId = val
     this.jsonPath = convertMaterialIdToJsonPath(this.id); // JsonPathは素材IDに依存する
   };
 
 
-  /* ----
-    素材名と画像をHTMLへ出力する
-  ---- */
+  /**
+   * 画像と素材名を並べてHTMLへ出力する
+   */
   async showMaterialNameAndImg() {
-    // JSONから素材のIDのみを抽出
+    // JSONファイルから素材IDを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialObject = data.materials.filter(k => k.id === this._id)[0];
+    const materialObject = data.materials.filter(k => k.id === this._materialId)[0];
 
     // 出力
     document.getElementById("materialName").innerHTML =
@@ -34,117 +37,55 @@ export default class handleMaterial {
 
 
   /**
-    収集場所を出力する
+   * 収集場所を出力する
    */
   async showStagesToGet() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialObject = data.materials.filter(k => k.id === this._id)[0];
-    const stages = materialObject.stageToGet;
+    const materialObject = data.materials.filter(k => k.id === this._materialId)[0];
+    const stagesObject = materialObject.stageToGet;
 
-    let message = "<p><収集場所></p>";
-
-    /* HTMLの作成 */
-    if (stages) {
-      message = message + `<table class="descriptionTable">`;
-      message = message + "<tr><th>Stage</th><th>消費理性</th><th>理性効率</th><th>備考</th></tr>";
-
-      for (const stage of stages) {
-        // 備考の内容
-        let note = `<span class="note">`;
-        if (stage.note === null) {
-          note = note = note + "-"; // デフォルトメッセージ
-        } else if (stage.note === "*1") {
-          note = note + "理性効率は悪いが、<br>副産物のランクが上";
-        } else {
-          note = note + stage.note;
-        }
-        note = note + "</span>"
-
-        /* ステージ、消費理性、理性効率（小数第2位まで）を表示 */
-        message = message +
-          `<tr>
-            <td>${stage.stage}</td>
-            <td>${stage.cost}</td>
-            <td>${stage.efficiency.toFixed(2)}</td>
-            <td>${note}</td>
-          </tr>`;
-      }
-      message = message + "</tr>";
-    } else {
-      message = message +
-        `<span class="note">直接ドロップするステージはありません。<br>
-        [下位素材]タブより、合成素材を確認してください。</span>`;
-    }
-
-    /* 出力・フェードイン処理 */
+    /* HTMLの作成と出力・フェードイン処理 */
     const target = document.getElementsByClassName("description")[0];
-    this.fadeIn(target, message);
+    this.fadeIn(target, createStageToGet(stagesObject));
   }
 
 
   /**
-    上位素材を表示する
+   * 上位素材を表示する
    */
   async showSuperiorMaterial() {
     /* JSONから必要なデータを抽出 */
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialObject = data.materials.filter(k => k.id === this._id)[0];
-    const superiorMaterials = materialObject.superiorMaterial;
+    const materialObject = data.materials.filter(k => k.id === this._materialId)[0];
+    const superiorMaterialsObject = materialObject.superiorMaterial;
 
-    /* HTMLの作成 */
-    let message = "<p><上位素材>";
-    if (superiorMaterials) {
-      for (const superiorMaterial of superiorMaterials) {
-        // 上位素材画像を表示する
-        message = message + `${convertMaterialIdToLink(superiorMaterial.id)}`;
-
-        // 上位素材名を表示する
-        message = message + `${convertMaterialIdToName(superiorMaterial.id)}<br>`;
-
-        // 必要素材を [画像]x[個数]の形式で表示
-        message = message +
-          `必要素材: ${convertRecipieToTag(superiorMaterial.recipie)}</$>`;
-      }
-    } else {
-      message = message + `<br><span class="note">上位素材はありません。</span></p>`;
-    }
-
-    /* 出力・フェードイン処理 */
+    /* HTMLの作成と出力・フェードイン処理 */
     let target = document.getElementsByClassName("description")[0];
-    this.fadeIn(target, message);
+    this.fadeIn(target, createSuperiorMaterial(superiorMaterialsObject));
   }
 
 
   /**
-    下位素材を表示する
+   * 下位素材を表示する
    */
   async showLowMaterial() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialObject = data.materials.filter(k => k.id === this._id)[0];
-    const lowMaterialRecipie = materialObject.lowMaterialRecipie;
-
-    // 必要素材を [画像]x[個数]の形式で表示
-    let message = "<p><下位素材>";
-    if (lowMaterialRecipie) {
-      message = message +
-        `<br>必要素材: ${convertRecipieToTag(lowMaterialRecipie)}</p>`;
-    } else {
-      message = message + `<br><span class="note">下位素材はありません。</span></p>`;
-    }
+    const materialObject = data.materials.filter(k => k.id === this._materialId)[0];
+    const lowMaterialRecipieObject = materialObject.lowMaterialRecipie;
 
     /* 出力・フェードイン処理 */
     const target = document.getElementsByClassName("description")[0];
-    this.fadeIn(target, message);
+    this.fadeIn(target, createLowMaterial(lowMaterialRecipieObject));
   }
 
 
   /**
-      フェードイン処理のメインプログラム
+   * フェードイン処理のメインプログラム
    */
   async fadeIn(target, message) {
     // フェードインクラスの削除
@@ -170,13 +111,13 @@ export default class handleMaterial {
 
 
   /**
-    下位素材の素材名と個数をオブジェクトで返却する
+   * 下位素材の素材名と個数をオブジェクトで返却する
    */
   async createLowmaterialObject() {
     // JSONから必要なデータを抽出
     const response = await fetch(this.jsonPath);
     const data = await response.json();
-    const materialObject = data.materials.filter(k => k.id === this._id)[0];
+    const materialObject = data.materials.filter(k => k.id === this._materialId)[0];
     const lowMaterialRecipie = materialObject.lowMaterialRecipie;
 
     // 連想配列の作成
