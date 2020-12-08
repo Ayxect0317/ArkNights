@@ -1,22 +1,28 @@
 "use strict";
 
-import zeroPadding from "./zeroPadding.js";
+/**
+ * 1. 現在の時刻を"YYYY/MM/DD HH:MM:SS" という形式で文字列を返す
+ * 2. 1秒ごとに 1. の文字列を更新し、header.jsの#nowTimeに出力する
+ */
 
-// 現在の時刻を文字列として返す
-const calcNowDate = () => {
+/**
+ * 1. 現在の時刻を"YYYY/MM/DD HH:MM:SS" という形式で文字列を返す
+ * padStart() は文字列に対してのみ動作するため、number型をstring型に変換する必要あり
+ */
+const adjustNowDate = () => {
   const nowDate = new Date();
-  const month = zeroPadding(nowDate.getMonth() + 1); // 0-11が返り値であるため、1を足す
-  const day = zeroPadding(nowDate.getDate());
-  const hour = zeroPadding(nowDate.getHours());
-  const minute = zeroPadding(nowDate.getMinutes());
-  const second = zeroPadding(nowDate.getSeconds());
+  const month = `${(nowDate.getMonth() + 1)}`.padStart(2, "0"); // 0-11が返り値であるため、1を足す
+  const day = `${(nowDate.getDate())}`.padStart(2, "0");
+  const hour = `${(nowDate.getHours())}`.padStart(2, "0");
+  const minute = `${(nowDate.getMinutes())}`.padStart(2, "0");
+  const second = `${(nowDate.getSeconds())}`.padStart(2, "0");
 
   return `${month}/${day} ${hour}:${minute}:${second}`;
 }
 
-// メッセージ内容を calcTimeToBeHeld.js から取得する
+/* 2. 1秒ごとに 1. の文字列を更新し、header.jsの#nowTimeに出力する */
 export default function recalcNowTime() {
-  document.getElementById("nowTime").textContent = calcNowDate();
+  document.getElementById("nowTime").textContent = adjustNowDate();
 
   // 1秒ごとに更新（メッセージを再取得）する
   refresh();
