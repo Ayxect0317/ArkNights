@@ -1,0 +1,15 @@
+body {
+  color: #000;
+}
+
+body a {
+  color: purple;
+}
+
+body img {
+  padding: .5em 0;
+}
+
+body p {
+  margin-bottom: 40px;
+}

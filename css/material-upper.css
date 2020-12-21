@@ -49,22 +49,17 @@ body {
     0px -2px .5px black;
 }
 
-/* 背景部分 */
+/* 背景 */
 #wrapDescription {
   flex-basis: 800px;
   padding-left: 1em;
 }
 
-/* 内容（文字）部分 */
+/* 内容（文字） */
 .description {
   font-size: 1.5em;
   opacity: 0;
   transition: all 1s;
-}
-
-/* 内容（文字）部分のフェードイン */
-.fade {
-  opacity: 1;
 }
 
 .descriptionTable {
